@@ -1,0 +1,11 @@
+@import '../../../styles/colors';
+
+
+.mainBody {
+  width: auto;
+  height: 4vh;
+  padding: 15px;
+  background-color: $dark;
+  color: $white;
+  text-align: right;
+}
