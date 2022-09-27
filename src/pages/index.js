@@ -1,8 +1,12 @@
 
-export default function Home() {
+import Home from './components/home/home';
+
+const AppIndex = () => {
   return (
     <div>
-      test
+      <Home/>
     </div>
   )
 }
+
+export default AppIndex;
