@@ -1,17 +1,25 @@
 
-@import './colors';
+@import './_colors.scss';
+@import './_nav.scss';
+
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 html,
 body {
-  font-family: 'Open Sans';
+  font-family: 'Open Sans'!important;
   padding: 0!important;
   margin: 0!important;
 }
 
 h1 {
-  font-size: 3em;
-  font-weight: bold!important;
+  font-size: 3em!important;
+  font-weight: normal!important;
+}
+
+h4 {
+  font-size: 1em!important;
+  font-weight: normal;
 }
 
 
