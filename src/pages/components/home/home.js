@@ -1,4 +1,5 @@
 
+import Icon from '../../components/icon/icon';
 import styles from './home.module.scss';
 
 const Home = () => {
@@ -14,7 +15,9 @@ const Home = () => {
           <i>&lt; Full Stack Software Engineer /&gt;</i>
         </h4>
       </div>
-
+      <div>
+        <Icon src="/assets/github.svg"/>
+      </div>
     </div>
   )
 }

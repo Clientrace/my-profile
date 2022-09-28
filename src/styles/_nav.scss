@@ -30,12 +30,11 @@
         width: 130px!important;
         margin-right: 5px!important;
     }
-
-
 }
 
 @media only screen and (max-width: 767.98px) {
     .navbar {
+        margin-left: auto;
         padding-left: 0 !important;
         padding-right: 0 !important;
     }

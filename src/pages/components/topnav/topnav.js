@@ -1,22 +1,36 @@
 
 import styles from './topnav.module.scss';
+import { Nav, Navbar } from 'react-bootstrap';
 
 
 const NavItem = ({active, name, link}) => {
   return (
     <div>
-      <a href={link}>{ name }</a>
+      <Nav.Link href={link}>
+        { name }
+      </Nav.Link>
     </div>
   )
 }
 
 
-const TopNav = () => {
+const TopNav = ({pageIndex}) => {
   const navList = [
     { title: 'About Me', link: '/' }
   ]
   return <div className={styles['mainBody']}>
-    About Me
+    <Navbar expand="lg" variant="dark" className="mr-auto">
+      <Navbar.Toggle aria-controls='responsive-navbar-nav'/>
+      <Navbar.Collapse>
+        <Nav activeKey={pageIndex} className="ml-auto">
+          {
+            navList.map((data, index)=>{
+              return <NavItem key={`navitem-${index}`} name={data['title']} link={data['link']}/>
+            })
+          }
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   </div>
 }
 
