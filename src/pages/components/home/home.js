@@ -1,5 +1,6 @@
 
 import Icon from '../../components/icon/icon';
+import Bar from '../../components/animations/bar/bar';
 import styles from './home.module.scss';
 
 const Home = () => {
