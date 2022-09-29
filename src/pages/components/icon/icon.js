@@ -2,12 +2,15 @@
 import styles from './icon.module.scss';
 
 
-const Icon = ({src}) => {
+const Icon = ({src, url}) => {
   return (
-    <img src={src} className={styles['image']}/>
+    <a href={url} target="_blank">
+      <img src={src} className={styles['image']}/>
+    </a>
   )
 }
 
 export default Icon;
+
 
 

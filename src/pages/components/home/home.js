@@ -15,13 +15,17 @@ const Home = () => {
           <i>&lt; Full Stack Software Engineer /&gt;</i>
         </h4>
       </div>
-      <div>
-        <Icon src="/assets/github.svg"/>
+      <div className={styles['socMed']}>
+        <Icon src="/assets/facebook.svg" url="https://web.facebook.com/kcpenaflor11"/>
+        <Icon src="/assets/github.svg" url="https://github.com/Clientrace"/>
+        <Icon src="/assets/linkedin.svg" url="https://www.linkedin.com/in/kcpenaflor"/>
+        <Icon src="/assets/instagram.svg" url="https://www.instagram.com/kcpenaflor/"/>
       </div>
     </div>
   )
 }
 
 export default Home;
+
 
 
