@@ -1,4 +1,11 @@
 
 .heading{
-
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  img {
+    margin-top: -5px;
+    width: auto;
+    height: auto;
+  }
 }
