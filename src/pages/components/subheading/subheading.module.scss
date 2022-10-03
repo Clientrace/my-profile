@@ -1,9 +1,11 @@
 
+@import '../../../styles/colors';
+
 .subheading{
   align-items: center;
   justify-content: center;
   vertical-align: middle;
   font-size: 0.9em!important;
-  color: #555;
+  color: $grey;
 }
 

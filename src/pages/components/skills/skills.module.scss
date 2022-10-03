@@ -1,15 +1,54 @@
+
+@import '../../../styles/colors';
+
+
 .mainBodyContainer {
   width: 100%;
-  height: 40vh;
+  height: auto;
   padding-top: 30px;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 15vw;
+  padding-right: 15vw;
+  padding-bottom: 50px;
   .body {
     width: 100%;
-    height: 40vh;
-  }
-  .content {
-    width: 100%;
-    height: 300px;
+    .container{
+      width: 100%;
+      height: auto;
+      display: flex;
+      .content {
+        width: 50%;
+        .chart {
+          padding: 30px;
+          margin-left: 1em;
+          height: auto;
+          margin-right: 1em;
+          width: 100%;
+          background-color: $dark2;
+          color: $white!important;
+          &-content {
+            width: 100%;
+            height: 100%;
+            padding-top: 10px;
+            padding-left: 20px;
+          }
+        }
+      }
+    }
   }
 }
+
+
+.gaugeBar {
+  width: 100%;
+  height: auto;
+  .title {
+    height: 25px;
+    font-size: 13px;
+    color: white;
+  }
+  .meter {
+    height: 15px;
+    width: 90%;
+  }
+}
+
