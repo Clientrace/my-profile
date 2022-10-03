@@ -1,7 +1,8 @@
 
 import styles from './skills.module.scss';
-import Icon from '../../components/icon/icon';
-import Heading from '../../components/heading/heading';
+import Heading from '../heading/heading';
+import Subheading from '../subheading/subheading';
+import Divider from '../divider/divider';
 
 
 const Skills = () => {
@@ -9,8 +10,12 @@ const Skills = () => {
     <div className={styles['mainBodyContainer']}>
       <div className={styles['body']}>
         <Heading>Techinical Skills</Heading>
-        <div className={styles['container']}>
-          Python, Javascript, Go lang, HTML, CSS
+        <div className={styles['content']}>
+          <Subheading>Basic:</Subheading>
+          <div className={styles['container']}>
+            Python, Javascript, Go lang, HTML, CSS, Java, C, C++
+          </div>
+          <Divider/>
         </div>
       </div>
     </div>
@@ -18,4 +23,5 @@ const Skills = () => {
 }
 
 export default Skills;
+
 
