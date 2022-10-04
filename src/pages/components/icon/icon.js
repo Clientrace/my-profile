@@ -7,7 +7,7 @@ const Icon = ({src, url}) => {
     <>
       {url?<a href={url} target="_blank">
         <img src={src} className={styles['image']}/>
-      </a>:<img src={src}/>}
+      </a>:<img src={src} className={styles['image']}/>}
     </>
   )
 }
