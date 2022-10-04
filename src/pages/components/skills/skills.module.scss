@@ -17,7 +17,14 @@
       display: flex;
       .content {
         width: 50%;
+        .contributions {
+          h2 {
+            letter-spacing: normal!important;
+            font-size: 12px!important;
+          }
+        }
         .chart {
+          border-top-left-radius: 30px;
           padding: 30px;
           margin-left: 1em;
           height: auto;

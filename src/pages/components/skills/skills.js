@@ -4,6 +4,7 @@ import Heading from '../heading/heading';
 import Subheading from '../subheading/subheading';
 import Gauage from '../gauge/gauge';
 import Divider from '../divider/divider';
+import GithubContributions from 'react-github-graph';
 
 const GauageBar = ({title, meter}) => {
   return (
@@ -31,6 +32,11 @@ const Skills = () => {
             <Divider/>
             <Subheading>Advance (Frameworks, Platforms, Cloud, and Other Technologies):</Subheading>
             ReactJS, AngularJS, VueJS, DynamoDB, AWS, Serverless, Terraform, Postgres, Redis, OpenCV, Linux, MongoDB, NativeScript, DialogFlow, Postman, Cypress
+            <Divider/>
+            <Subheading>Personal Github Contributions:</Subheading>
+            <div className={styles['contributions']}>
+              <GithubContributions username="Clientrace"/>
+            </div>
           </div>
           <div className={styles['content']}>
             <div className={styles['chart']}>
