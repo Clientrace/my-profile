@@ -43,15 +43,15 @@ const Skills = () => {
               <h2>Language Mastery Chart</h2>
               <h5>Rating myself in each languages</h5>
               <div className={styles['chart-content']}>
-                <GauageBar title="Python" meter="85%"/>
-                <GauageBar title="Javascript" meter="75%"/>
-                <GauageBar title="NodeJS" meter="75%"/>
-                <GauageBar title="Go lang" meter="60%"/>
-                <GauageBar title="HTML" meter="70%"/>
-                <GauageBar title="CSS" meter="60%"/>
-                <GauageBar title="Java" meter="40%"/>
-                <GauageBar title="C" meter="50%"/>
-                <GauageBar title="C++" meter="40%"/>
+                <GauageBar title="Python (5yrs Exp)" meter="85%"/>
+                <GauageBar title="Javascript (4yrs Exp)" meter="75%"/>
+                <GauageBar title="NodeJS (4yrs Exp)" meter="75%"/>
+                <GauageBar title="Go lang (2yrs Exp)" meter="60%"/>
+                <GauageBar title="HTML (5yrs Exp)" meter="70%"/>
+                <GauageBar title="CSS (5yrs Exp)" meter="60%"/>
+                <GauageBar title="Java (2yrs Exp)" meter="40%"/>
+                <GauageBar title="C (1yr Exp)" meter="30%"/>
+                <GauageBar title="C++ (1yr Exp)" meter="20%"/>
               </div>
             </div>
           </div>
