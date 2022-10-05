@@ -4,6 +4,10 @@ import Bar from '../../components/animations/bar/bar';
 import styles from './home.module.scss';
 
 const Home = () => {
+
+  const handleScroll = () => {
+  }
+
   return (
     <div className={styles['mainBody']}>
       <div className={styles['mainTitle']}>
