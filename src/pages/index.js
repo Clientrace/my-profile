@@ -9,7 +9,6 @@ import Skills from './components/skills/skills';
 const AppIndex = () => {
   return (
     <div>
-      <TopNav/>
       <Home/>
       <Projects/>
       <Skills/>

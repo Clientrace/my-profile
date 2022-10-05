@@ -35,7 +35,7 @@ const Skills = () => {
             <Divider/>
             <Subheading>Personal Github Contributions:</Subheading>
             <div className={styles['contributions']}>
-              <GithubContributions username="Clientrace"/>
+              {/* <GithubContributions username="Clientrace"/> */}
             </div>
           </div>
           <div className={styles['content']}>

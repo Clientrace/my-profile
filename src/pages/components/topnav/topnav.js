@@ -14,13 +14,17 @@ const NavItem = ({active, name, link}) => {
 }
 
 
-const TopNav = ({pageIndex}) => {
+const TopNav = ({pageIndex, showBrand=false}) => {
   const navList = [
     { title: 'About Me', link: '/' }
   ]
   return <div className={styles['mainBody']}>
     <Navbar expand="lg" variant="dark" className="mr-auto">
       <Navbar.Toggle aria-controls='responsive-navbar-nav'/>
+      {showBrand && <Navbar.Brand className={styles['brand']}>
+        <img src='/assets/logo.svg'/>
+        Kim Clarence Penaflor
+      </Navbar.Brand>}
       <Navbar.Collapse>
         <Nav activeKey={pageIndex} className="ml-auto">
           {

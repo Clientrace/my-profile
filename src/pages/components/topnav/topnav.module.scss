@@ -4,10 +4,16 @@
 .mainBody {
   width: auto;
   height: 4vh;
-  padding: 15px;
   background-color: $dark;
   color: $white;
   text-align: right;
   align-items: right;
   justify-content: right;
+  .brand {
+    font-size: 15px;
+    img {
+      width: auto;
+      height: 40px;
+    }
+  }
 }

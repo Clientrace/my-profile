@@ -5,44 +5,46 @@ import styles from './home.module.scss';
 import getScrollPosition from '../../../helper/scrollPos';
 import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
+import TopNav from '../topnav/topnav';
 
 
 const StickyBanner = () => {
   return (
-    <div className={styles['stickyBanner']}>
-      <img src='/assets/logo.svg' className={styles['logo']}/>
-    </div>
+    <motion.div
+      initial={{opacity: 0}}
+      animate={{opacity: 1}}
+      transition={{duration: 0.3}}
+      className={styles['stickyBanner']}>
+      <TopNav showBrand/>
+    </motion.div>
   )
 }
 
 
 
 const Home = () => {
+  const TOP_BANNER_OFFSET = -290;
   const pageRef = useRef(null);
   const [isSticky, setSticky] = useState(false);
 
+
   const handleScroll = () => {
-    if(getScrollPosition(pageRef.current).y > -200){
-      setSticky(false);
-    } else {
-      setSticky(true);
-    }
+    console.log('triggered');
+    var scrollPos = getScrollPosition(pageRef.current).y;
+    setSticky(scrollPos < TOP_BANNER_OFFSET);
   }
 
   useEffect(()=>{
-    console.log("IS STICKY VALUE: ", isSticky);
-  }, [isSticky])
-
-  useEffect(()=>{
     window.addEventListener('scroll', handleScroll);
+    window.removeEventListener('scroll', ()=>handleScroll);
   }, []);
 
-  useEffect(()=>{
-    window.removeEventListener('scrolll', ()=>handleScroll)
-  })
-
+  
   return (
     <>
+      <div className={styles['nonStickyBanner']}>
+        <TopNav/>
+      </div>
       <div ref={pageRef} className={styles['mainBody']}>
         <div className={styles['mainTitle']}>
           <h1>
@@ -50,11 +52,6 @@ const Home = () => {
           </h1>
         </div>
         <motion.img
-          animate={{
-            opacity: [0, .6],
-            rotate: [-60, 0]
-          }}
-          transition={{duration: 25}}
           src='/assets/logo.svg' className={styles['logo']}/>
         <div className={styles['mainSubtitle']}>
           <h4>

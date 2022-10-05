@@ -12,6 +12,7 @@
   text-align: center;
   flex-direction: column;
   .logo{
+    opacity: 0.1;
     width: 200px;
     position: absolute;
     right: 15em;
@@ -42,4 +43,12 @@
   background-color: $dark;
   color: $white;
   padding: 10px;
+}
+
+.nonStickyBanner {
+  width: 100%;
+  background-color: $dark;
+  color: $white;
+  padding-left: 10px;
+  padding-top: 10px;
 }
