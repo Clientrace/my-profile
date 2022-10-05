@@ -1,6 +1,8 @@
 
 
 
+
+
 const getScrollPosition = (element) => {
   var xPos = 0;
   var yPos = 0;
