@@ -26,7 +26,7 @@ const TopNav = ({pageIndex, showBrand=false}) => {
         Kim Clarence Penaflor
       </Navbar.Brand>}
       <Navbar.Collapse>
-        <Nav activeKey={pageIndex} className="ml-auto">
+        <Nav activeKey={pageIndex} className="ms-auto">
           {
             navList.map((data, index)=>{
               return <NavItem key={`navitem-${index}`} name={data['title']} link={data['link']}/>
