@@ -3,6 +3,7 @@ import Icon from '../../components/icon/icon';
 import Bar from '../../components/animations/bar/bar';
 import styles from './home.module.scss';
 import getScrollPosition from '../../../helper/scrollPos';
+import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 
 const Home = () => {
@@ -35,7 +36,13 @@ const Home = () => {
           Kim Clarence Peñaflor
         </h1>
       </div>
-      <img src='/assets/logo.svg' className={styles['logo']}/>
+      <motion.img
+        animate={{
+          opacity: [0, 1, 1, 0],
+          rotate: [-60, 0, 310]
+        }}
+        transition={{duration: 15, repeat: Infinity}}
+        src='/assets/logo.svg' className={styles['logo']}/>
       <div className={styles['mainSubtitle']}>
         <h4>
           <i>&lt; Full Stack Software Engineer /&gt;</i>

@@ -24,7 +24,7 @@ const Skills = () => {
   return (
     <div className={styles['mainBodyContainer']}>
       <div className={styles['body']}>
-        <Heading>Techinical Skills</Heading>
+        <Heading>Technical Skills</Heading>
         <div className={styles['container']}>
           <div className={styles['content']}>
             <Subheading>Basic (Languages and Databases):</Subheading>
