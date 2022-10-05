@@ -2,11 +2,31 @@
 import Icon from '../../components/icon/icon';
 import Bar from '../../components/animations/bar/bar';
 import styles from './home.module.scss';
+import getScrollPosition from '../../../helper/scrollPos';
+import { useEffect, useRef, useState } from 'react';
 
 const Home = () => {
+  const pageRef = useRef(null);
+  const [isSticky, setSticky] = useState(false);
 
   const handleScroll = () => {
+    console.log("SCROLL POSITION: ", getScrollPosition(pageRef.current).y);
+    if(getScrollPosition(pageRef.current).y > -20){
+      setSticky(false);
+    } else {
+      setSticky(true);
+    }
   }
+
+
+  useEffect(()=>{
+    console.log("IS STICKY VALUE: ", isSticky);
+  }, [isSticky])
+
+
+  useEffect(()=>{
+    window.addEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <div className={styles['mainBody']}>
@@ -15,6 +35,7 @@ const Home = () => {
           Kim Clarence Peñaflor
         </h1>
       </div>
+      <img src='/assets/logo.svg' className={styles['logo']}/>
       <div className={styles['mainSubtitle']}>
         <h4>
           <i>&lt; Full Stack Software Engineer /&gt;</i>

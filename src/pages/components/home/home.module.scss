@@ -11,6 +11,11 @@
   align-items: center;
   text-align: center;
   flex-direction: column;
+  .logo{
+    width: 200px;
+    position: absolute;
+    right: 15em;
+  }
   .mainTitle {
     height: 60px;
     letter-spacing: 4px;
