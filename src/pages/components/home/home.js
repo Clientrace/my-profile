@@ -5,6 +5,7 @@ import styles from './home.module.scss';
 import getScrollPosition from '../../../helper/scrollPos';
 import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
+import Name from '../animations/name/name';
 import TopNav from '../topnav/topnav';
 
 
@@ -46,7 +47,7 @@ const Home = () => {
       <div ref={pageRef} className={styles['mainBody']}>
         <div className={styles['mainTitle']}>
           <motion.h1 initial={{opacity: 0}} animate={{opacity: 1}}>
-            Kim Clarence Peñaflor
+            <Name/>
           </motion.h1>
         </div>
         <motion.img
