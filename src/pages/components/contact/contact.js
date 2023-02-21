@@ -3,15 +3,18 @@ import Divider from "../divider/divider";
 import style from "./contact.module.scss";
 import Heading from "../heading/heading";
 import Subheading from "../subheading/subheading";
+import Name from "../animations/name/name";
 import Icon from "../icon/icon";
+import { useState } from "react";
 
 
 const Contact = ({setCmdText}) => {
+  const [loaded, setLoaded] = useState(false);
   return (
     <div className={style['mainBodyContainer']}>
       <div className={style['body']}>
         <Heading>
-          Contact
+          {loaded? "Contact": <Name text="Contact" initSpeed={200} teardown={()=>setLoaded(true)}/>}
         </Heading>
         <div className={style['container']}>
           <div className={style['content']}>

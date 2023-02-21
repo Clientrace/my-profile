@@ -20,12 +20,25 @@ const AppIndex = () => {
   const [commandFlag, setCommandFlag] = useState(false);
   const [cmdAccessFlag, setCmdAccessFlag] = useState(false);
 
+  const [componentIdx, setComponentIdx] = useState(0);
   const [componentFlags, setComponentFlags] = useState([false, false, false]);
   const [cmdText, setCmdText] = useState("> Let there be light");
 
-  useInterval(()=>{setSkillsFlag(true);}, 6500);
-  useInterval(()=>{setProjFlag(true);}, 8500);
-  useInterval(()=>{setCommandFlag(true);}, 3500);
+  const [compRenderDelay, setCompRenderDelay] = useState(6800);
+
+  // useInterval(()=>{setSkillsFlag(true);}, 6500);
+  // useInterval(()=>{setProjFlag(true);}, 8500);
+
+  useInterval(()=>{setCommandFlag(true);}, 4800);
+  useInterval(()=>{
+    const compFlags = [...componentFlags];
+    compFlags[componentIdx] = true;
+    setComponentFlags(compFlags);
+    setComponentIdx(componentIdx+1);
+    if(compFlags[0]){
+      setCompRenderDelay(2000);
+    }
+  }, compRenderDelay)
 
   const setInteractiveText = (text) => {
     if(cmdAccessFlag){
@@ -45,9 +58,10 @@ const AppIndex = () => {
           refSpeed={80}
           teardown={()=>setCmdAccessFlag(true)}/>:"> Hello friend. Let me introduce myself. " }
       </motion.div>
-      { projFlag && <Projects hoverAction={()=>setInteractiveText("> Browse my projects")}/> }
-      { skillsFlag && <Skills/> }
-      <Contact setCmdText={setInteractiveText}/>
+
+      { componentFlags[2] && <Projects hoverAction={()=>setInteractiveText("> Browse my projects")}/> }
+      { componentFlags[1] && <Skills/> }
+      { componentFlags[0] && <Contact setCmdText={setInteractiveText}/>}
       {/* <Graph/> */}
     </div>
   )
