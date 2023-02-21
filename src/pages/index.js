@@ -15,6 +15,7 @@ const AppIndex = () => {
   const [projFlag, setProjFlag] = useState(false);
   const [skillsFlag, setSkillsFlag] = useState(false);
   const [commandFlag, setCommandFlag] = useState(false);
+  const [cmdText, setCmdText] = useState("> Let there be light");
 
   useInterval(()=>{setSkillsFlag(true);}, 6500);
   useInterval(()=>{setProjFlag(true);}, 8500);
@@ -22,14 +23,14 @@ const AppIndex = () => {
 
   return (
     <div>
-      <Home/>
+      <Home setCmdText={setCmdText}/>
       <motion.div
         initial={{opacity: 0}}
         animate={{opacity: 1}}
         className={style['command']}>
-        { commandFlag ? <Name text="> Let there be light" initSpeed={200}/>:"> Hello friend. Let me introduce myself. " }
+        { commandFlag ? <Name text={cmdText} initSpeed={100}/>:"> Hello friend. Let me introduce myself. " }
       </motion.div>
-     { projFlag && <Projects/> }
+      { projFlag && <Projects hoverAction={()=>setCmdText("> Browse my projects")}/> }
       { skillsFlag && <Skills/> }
       {/* <Graph/> */}
     </div>

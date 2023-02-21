@@ -17,10 +17,12 @@ const Card = ({name, bg, children}) => {
 }
 
 
-const Projects = () => {
+const Projects = ({hoverAction}) => {
   const [loaded, setLoaded] = useState(false);
   return (
-    <div className={styles['mainBodyContainer']}>
+    <motion.div
+      onHoverStart={()=>hoverAction()}
+      className={styles['mainBodyContainer']} style={{opacity: 0.8}} whileHover={{opacity: 1}}>
       <div className={styles['body']}>
         <Heading iconUrl="/assets/folder.svg">
           {loaded? "Projects": <Name text="Projects" initSpeed={200} teardown={()=>setLoaded(true)}/>}
@@ -46,7 +48,7 @@ const Projects = () => {
           </div>
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

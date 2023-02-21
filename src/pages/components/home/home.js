@@ -22,10 +22,11 @@ const StickyBanner = () => {
 }
 
 
-const Home = () => {
+const Home = ({setCmdText}) => {
   const TOP_BANNER_OFFSET = -150;
   const pageRef = useRef(null);
   const [isSticky, setSticky] = useState(false);
+  const [loaded, setLoaded] = useState(false);
 
 
   const handleScroll = () => {

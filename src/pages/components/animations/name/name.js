@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useInterval } from "../../../../helper/delta-timer";
 
 const Name = ({initSpeed, text, teardown}) => {
@@ -11,8 +11,17 @@ const Name = ({initSpeed, text, teardown}) => {
   const [speed, setSpeed] = useState(initSpeed);
   const [name, setName] = useState([]);
 
+  useEffect(()=>{
+    setName([]);
+  },[text])
+
   useInterval(()=>{
     setBleep(!bleep);
+    if(name.length >= fullname.length){
+      if(teardown){
+        teardown();
+      }
+    }
   }, 750)
 
   useInterval(()=>{
@@ -22,11 +31,6 @@ const Name = ({initSpeed, text, teardown}) => {
     }
     if(name.length > 5){
       setSpeed(100);
-    }
-    if(name.length === fullname.length){
-      if(teardown){
-        teardown();
-      }
     }
   }, speed)
 
