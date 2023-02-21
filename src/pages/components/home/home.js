@@ -21,7 +21,6 @@ const StickyBanner = () => {
   )
 }
 
-
 const Home = ({setCmdText}) => {
   const TOP_BANNER_OFFSET = -150;
   const pageRef = useRef(null);

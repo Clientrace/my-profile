@@ -3,8 +3,11 @@ import TopNav from './components/topnav/topnav';
 import Home from './components/home/home';
 import Graph from './components/graph/graph';
 import Bar from './components/animations/bar/bar';
+
+import Contact from './components/contact/contact';
 import Projects from './components/projects/projects';
 import Skills from './components/skills/skills';
+
 import { useInterval } from '../helper/delta-timer';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -16,6 +19,8 @@ const AppIndex = () => {
   const [skillsFlag, setSkillsFlag] = useState(false);
   const [commandFlag, setCommandFlag] = useState(false);
   const [cmdAccessFlag, setCmdAccessFlag] = useState(false);
+
+  const [componentFlags, setComponentFlags] = useState([false, false, false]);
   const [cmdText, setCmdText] = useState("> Let there be light");
 
   useInterval(()=>{setSkillsFlag(true);}, 6500);
@@ -42,11 +47,15 @@ const AppIndex = () => {
       </motion.div>
       { projFlag && <Projects hoverAction={()=>setInteractiveText("> Browse my projects")}/> }
       { skillsFlag && <Skills/> }
+      <Contact setCmdText={setInteractiveText}/>
       {/* <Graph/> */}
     </div>
   )
 }
 
 export default AppIndex;
+
+
+
 
 
