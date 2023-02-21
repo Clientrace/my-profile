@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { useInterval } from "../../../../helper/delta-timer";
 
-const Name = ({initSpeed, text, teardown}) => {
+const Name = ({initSpeed, text, teardown, refSpeed=100}) => {
   let fullname = [];
   for(var i=0;i<text.length;i++){
     fullname.push(text[i]);
@@ -30,7 +30,7 @@ const Name = ({initSpeed, text, teardown}) => {
       setName(n);
     }
     if(name.length > 5){
-      setSpeed(100);
+      setSpeed(refSpeed);
     }
   }, speed)
 

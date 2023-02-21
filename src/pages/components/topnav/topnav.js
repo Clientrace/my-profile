@@ -16,7 +16,7 @@ const NavItem = ({active, name, link}) => {
 
 const TopNav = ({pageIndex, showBrand=false}) => {
   const navList = [
-    { title: 'About Me', link: '/' }
+    { title: 'Reboot', link: '/' }
   ]
   return <div className={styles['mainBody']}>
     <Navbar expand="lg" variant="dark" className="mr-auto">
