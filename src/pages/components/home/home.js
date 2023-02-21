@@ -52,15 +52,15 @@ const Home = () => {
         <motion.img
           src='/assets/logo.svg' className={styles['logo']}/>
         <div className={styles['mainSubtitle']}>
-          <h4>
+          <motion.h4 initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 0.2}}>
             <i>&lt; Full Stack Software Engineer /&gt;</i>
-          </h4>
+          </motion.h4>
         </div>
         <div className={styles['socMed']}>
-          <Icon src="/assets/facebook.svg" url="https://web.facebook.com/kcpenaflor11"/>
-          <Icon src="/assets/github.svg" url="https://github.com/Clientrace"/>
-          <Icon src="/assets/linkedin.svg" url="https://www.linkedin.com/in/kcpenaflor"/>
-          <Icon src="/assets/instagram.svg" url="https://www.instagram.com/kcpenaflor/"/>
+          <Icon src="/assets/facebook.svg" url="https://web.facebook.com/kcpenaflor11" delay={0.4}/>
+          <Icon src="/assets/github.svg" url="https://github.com/Clientrace" delay={0.6}/>
+          <Icon src="/assets/linkedin.svg" url="https://www.linkedin.com/in/kcpenaflor" delay={0.7}/>
+          <Icon src="/assets/instagram.svg" url="https://www.instagram.com/kcpenaflor/" delay={0.8}/>
         </div>
       </div>
       {isSticky && <StickyBanner/>}
