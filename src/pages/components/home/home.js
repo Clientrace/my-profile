@@ -45,7 +45,7 @@ const Home = ({setCmdText}) => {
       </div>
       <div ref={pageRef} className={styles['mainBody']}>
         <div className={styles['mainTitle']}>
-          <motion.h1 initial={{opacity: 0}} animate={{opacity: 1}}>
+          <motion.h1 initial={{opacity: 0}} animate={{opacity: 1}} onHoverStart={()=>setCmdText("> Yep, that's my name")}>
             <Name text="Kim Clarence Peñaflor" initSpeed={300}/>
           </motion.h1>
         </div>

@@ -13,6 +13,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Name from './components/animations/name/name';
 import style from './main.module.scss';
+import Quote from './components/quote/quote';
 
 const AppIndex = () => {
   const [projFlag, setProjFlag] = useState(false);
@@ -59,9 +60,10 @@ const AppIndex = () => {
           teardown={()=>setCmdAccessFlag(true)}/>:"> Hello friend. Let me introduce myself. " }
       </motion.div>
 
-      { componentFlags[2] && <Projects hoverAction={()=>setInteractiveText("> Browse my projects")}/> }
-      { componentFlags[1] && <Skills/> }
-      { componentFlags[0] && <Contact setCmdText={setInteractiveText}/>}
+      { componentFlags[3] && <Projects hoverAction={()=>setInteractiveText("> Browse my projects")}/> }
+      { componentFlags[2] && <Skills/> }
+      { componentFlags[1] && <Contact setCmdText={setInteractiveText}/>}
+      { componentFlags[0] && <Quote setCmdText={setInteractiveText}/>}
       {/* <Graph/> */}
     </div>
   )
