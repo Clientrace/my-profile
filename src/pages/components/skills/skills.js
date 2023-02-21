@@ -28,7 +28,7 @@ const Skills = () => {
         <div className={styles['container']}>
           <div className={styles['content']}>
             <Subheading>Basic (Languages and Databases):</Subheading>
-            Python, Javascript, NodeJS, Go lang, HTML, CSS, Java, C, C++, MySQL
+            Python, Javascript, NodeJS, Go lang, HTML, CSS, Java, C, C++, MySQL, NoSQL
             <Divider/>
             <Subheading>Advance (Frameworks, Platforms, Cloud, and Other Technologies):</Subheading>
             ReactJS, AngularJS, VueJS, DynamoDB, AWS, Serverless, Terraform, Postgres, Redis, OpenCV, Linux, MongoDB, NativeScript, DialogFlow, Postman, Cypress

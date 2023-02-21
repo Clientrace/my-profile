@@ -13,7 +13,7 @@ const StickyBanner = () => {
     <motion.div
       initial={{opacity: 0}}
       animate={{opacity: 1}}
-      transition={{duration: 0.3}}
+      transition={{duration: 0.5}}
       className={styles['stickyBanner']}>
       <TopNav showBrand/>
     </motion.div>
@@ -21,15 +21,13 @@ const StickyBanner = () => {
 }
 
 
-
 const Home = () => {
-  const TOP_BANNER_OFFSET = -290;
+  const TOP_BANNER_OFFSET = -150;
   const pageRef = useRef(null);
   const [isSticky, setSticky] = useState(false);
 
 
   const handleScroll = () => {
-    console.log('triggered');
     var scrollPos = getScrollPosition(pageRef.current).y;
     setSticky(scrollPos < TOP_BANNER_OFFSET);
   }
@@ -47,9 +45,9 @@ const Home = () => {
       </div>
       <div ref={pageRef} className={styles['mainBody']}>
         <div className={styles['mainTitle']}>
-          <h1>
+          <motion.h1 initial={{opacity: 0}} animate={{opacity: 1}}>
             Kim Clarence Peñaflor
-          </h1>
+          </motion.h1>
         </div>
         <motion.img
           src='/assets/logo.svg' className={styles['logo']}/>

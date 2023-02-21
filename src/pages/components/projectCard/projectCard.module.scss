@@ -1,5 +1,43 @@
 
-.mainBody{
+@import '../../../styles/colors';
 
+.mainBody{
+  width: 25em;
+  height: 12em;
+  margin: 5px;
+  position: relative;
+  .overlay {
+    top: 0;
+    left: 0;
+    width: 25em;
+    height: 12em;
+    opacity: 0.9;
+    padding: 1em;
+    color: $white;
+    background-color: $dark;
+    .description {
+      margin-top: 5px;
+      font-size: 0.8em;
+    }
+    .red {
+      height: 10px;
+      background-color: red;
+      width: 30px;
+      bottom: 0;
+      right: 0;
+    }
+    .tech {
+      margin-top: 10px;
+      img {
+        width: 25px;
+      }
+    }
+    .action {
+      bottom: 15px;
+      right: 20px;
+      position: absolute;
+      font-size: .8em;
+    }
+  }
 }
 

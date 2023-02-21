@@ -10,6 +10,14 @@
   padding-bottom: 50px;
   .body {
     width: 100%;
+    .projectList {
+      display: flex;
+      flex-direction: row;
+      .card {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+    }
   }
 }
 
