@@ -1,15 +1,14 @@
 
 import { useState } from "react";
 import { useInterval } from "../../../../helper/delta-timer";
-import { motion } from 'framer-motion';
 
-const Name = () => {
-  const fullname = 
-    ["K","i","m"," ",
-     "C","l","a","r","e","n","c","e"," ",
-     "P","e","ñ","a","f","l","o","r"];
+const Name = ({initSpeed, text, teardown}) => {
+  let fullname = [];
+  for(var i=0;i<text.length;i++){
+    fullname.push(text[i]);
+  }
   const [bleep, setBleep] = useState(false);
-  const [speed, setSpeed] = useState(400);
+  const [speed, setSpeed] = useState(initSpeed);
   const [name, setName] = useState([]);
 
   useInterval(()=>{
@@ -24,15 +23,22 @@ const Name = () => {
     if(name.length > 5){
       setSpeed(100);
     }
+    if(name.length === fullname.length){
+      if(teardown){
+        teardown();
+      }
+    }
   }, speed)
 
   return <>
-    { name.map(el=>{
+    { name.map((el, idx)=>{
+      if(idx == name.length-1){
+        return <a style={{opacity: bleep?0:1}}>{el}</a>
+      }
       return <>{el}</>
     }) }
   </>
 }
 
 export default Name;
-
 

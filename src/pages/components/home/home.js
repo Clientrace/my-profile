@@ -47,21 +47,24 @@ const Home = () => {
       <div ref={pageRef} className={styles['mainBody']}>
         <div className={styles['mainTitle']}>
           <motion.h1 initial={{opacity: 0}} animate={{opacity: 1}}>
-            <Name/>
+            <Name text="Kim Clarence Peñaflor" initSpeed={300}/>
           </motion.h1>
         </div>
         <motion.img
+          initial={{opacity: 0}}
+          animate={{opacity: 0.1}}
+          transition={{delay: 5}}
           src='/assets/logo.svg' className={styles['logo']}/>
         <div className={styles['mainSubtitle']}>
-          <motion.h4 initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 0.2}}>
+          <motion.h4 initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 5}}>
             <i>&lt; Full Stack Software Engineer /&gt;</i>
           </motion.h4>
         </div>
         <div className={styles['socMed']}>
-          <Icon src="/assets/facebook.svg" url="https://web.facebook.com/kcpenaflor11" delay={0.4}/>
-          <Icon src="/assets/github.svg" url="https://github.com/Clientrace" delay={0.6}/>
-          <Icon src="/assets/linkedin.svg" url="https://www.linkedin.com/in/kcpenaflor" delay={0.7}/>
-          <Icon src="/assets/instagram.svg" url="https://www.instagram.com/kcpenaflor/" delay={0.8}/>
+          <Icon src="/assets/facebook.svg" url="https://web.facebook.com/kcpenaflor11" delay={5.2}/>
+          <Icon src="/assets/github.svg" url="https://github.com/Clientrace" delay={5.4}/>
+          <Icon src="/assets/linkedin.svg" url="https://www.linkedin.com/in/kcpenaflor" delay={5.6}/>
+          <Icon src="/assets/instagram.svg" url="https://www.instagram.com/kcpenaflor/" delay={5.8}/>
         </div>
       </div>
       {isSticky && <StickyBanner/>}

@@ -5,6 +5,8 @@ import Subheading from '../subheading/subheading';
 import Gauage from '../gauge/gauge';
 import Divider from '../divider/divider';
 import GithubContributions from 'react-github-graph';
+import Name from '../animations/name/name';
+import { useState } from 'react';
 
 const GauageBar = ({title, meter}) => {
   return (
@@ -21,10 +23,15 @@ const GauageBar = ({title, meter}) => {
 
 
 const Skills = () => {
+  const [loaded, setLoaded] = useState(false);
+
   return (
     <div className={styles['mainBodyContainer']}>
       <div className={styles['body']}>
-        <Heading>Technical Skills</Heading>
+        <Heading>
+          { loaded? "Technical Skills":
+            <Name text="Technical Skills" initSpeed={100} teardown={()=>setLoaded(true)}/> }
+        </Heading>
         <div className={styles['container']}>
           <div className={styles['content']}>
             <Subheading>Basic (Languages and Databases):</Subheading>

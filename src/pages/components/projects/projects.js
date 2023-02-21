@@ -4,6 +4,9 @@ import Heading from '../heading/heading';
 import Subheading from '../subheading/subheading';
 import styles from './projects.module.scss';
 import ProjectCard from '../projectCard/projectCard';
+import Name from '../animations/name/name';
+import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const Card = ({name, bg, children}) => {
   return <div className={styles['card']}>
@@ -15,11 +18,14 @@ const Card = ({name, bg, children}) => {
 
 
 const Projects = () => {
+  const [loaded, setLoaded] = useState(false);
   return (
     <div className={styles['mainBodyContainer']}>
       <div className={styles['body']}>
-        <Heading iconUrl="/assets/folder.svg">Projects</Heading>
-        <div className={styles['container']}>
+        <Heading iconUrl="/assets/folder.svg">
+          {loaded? "Projects": <Name text="Projects" initSpeed={200} teardown={()=>setLoaded(true)}/>}
+        </Heading>
+        <motion.div className={styles['container']} initial={{opacity: 0}} animate={{opacity: 1}}>
           <div className={styles['content']}>
             <Subheading>Personal Projects</Subheading>
             I have worked on a lot of pet projects, some are publicly viewable on my github account.
@@ -32,9 +38,13 @@ const Projects = () => {
               <ProjectCard name="Inxscape" 
                 tech={['python']}
                 subtitle="Headless Web CMS Tool"/>
+
+              <ProjectCard name="Pymicro" 
+                tech={['python']}
+                subtitle="Headless Web CMS Tool"/>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   )

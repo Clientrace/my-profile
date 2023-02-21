@@ -2,15 +2,15 @@
 @import '../../../styles/colors';
 
 .mainBody{
-  width: 25em;
-  height: 12em;
+  width: 20em;
+  height: 10em;
   margin: 5px;
   position: relative;
   .overlay {
     top: 0;
     left: 0;
-    width: 25em;
-    height: 12em;
+    width: 20em;
+    height: 10em;
     opacity: 0.9;
     padding: 1em;
     color: $white;
