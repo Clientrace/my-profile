@@ -16,8 +16,7 @@ import style from './main.module.scss';
 import Quote from './components/quote/quote';
 
 const AppIndex = () => {
-  const [projFlag, setProjFlag] = useState(false);
-  const [skillsFlag, setSkillsFlag] = useState(false);
+  const [cmdSticky, setCmdSticky] = useState(false);
   const [commandFlag, setCommandFlag] = useState(false);
   const [cmdAccessFlag, setCmdAccessFlag] = useState(false);
 
@@ -26,9 +25,6 @@ const AppIndex = () => {
   const [cmdText, setCmdText] = useState("> Let there be light");
 
   const [compRenderDelay, setCompRenderDelay] = useState(6800);
-
-  // useInterval(()=>{setSkillsFlag(true);}, 6500);
-  // useInterval(()=>{setProjFlag(true);}, 8500);
 
   useInterval(()=>{setCommandFlag(true);}, 4800);
   useInterval(()=>{
@@ -49,20 +45,20 @@ const AppIndex = () => {
 
   return (
     <div>
-      <Home setCmdText={setInteractiveText}/>
+      <Home setCmdText={setInteractiveText} setCmdSticky={setCmdSticky}/>
       <motion.div
         initial={{opacity: 0}}
         animate={{opacity: 1}}
-        className={style['command']}>
+        className={style[cmdSticky?"command-sticky":"command"]}>
         { commandFlag ? <Name text={cmdText}
           initSpeed={100}
-          refSpeed={80}
+          refSpeed={60}
           teardown={()=>setCmdAccessFlag(true)}/>:"> Hello friend. Let me introduce myself. " }
       </motion.div>
 
       { componentFlags[3] && <Projects hoverAction={()=>setInteractiveText("> Browse my projects")}/> }
-      { componentFlags[2] && <Skills/> }
-      { componentFlags[1] && <Contact setCmdText={setInteractiveText}/>}
+      { componentFlags[2] && <Skills hoverAction={()=>setInteractiveText("> Some of my technical skills")}/> }
+      { componentFlags[1] && <Contact hoverAction={()=>setInteractiveText("> Contact me from any of that")} setCmdText={setInteractiveText}/>}
       { componentFlags[0] && <Quote setCmdText={setInteractiveText}/>}
       {/* <Graph/> */}
     </div>

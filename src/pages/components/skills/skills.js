@@ -6,6 +6,7 @@ import Gauage from '../gauge/gauge';
 import Divider from '../divider/divider';
 import GithubContributions from 'react-github-graph';
 import Name from '../animations/name/name';
+import { motion } from 'framer-motion';
 import { useState } from 'react';
 
 const GauageBar = ({title, meter}) => {
@@ -22,11 +23,14 @@ const GauageBar = ({title, meter}) => {
 }
 
 
-const Skills = () => {
+const Skills = ({hoverAction}) => {
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <div className={styles['mainBodyContainer']}>
+    <motion.div className={styles['mainBodyContainer']}
+      onHoverStart={()=>hoverAction()}
+      style={{opacity: 0.8}}
+      whileHover={{opacity: 1}}>
       <div className={styles['body']}>
         <Heading>
           { loaded? "Technical Skills":
@@ -64,7 +68,7 @@ const Skills = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

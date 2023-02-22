@@ -5,13 +5,17 @@ import Heading from "../heading/heading";
 import Subheading from "../subheading/subheading";
 import Name from "../animations/name/name";
 import Icon from "../icon/icon";
+import { motion } from "framer-motion";
 import { useState } from "react";
 
 
-const Contact = ({setCmdText}) => {
+const Contact = ({setCmdText, hoverAction}) => {
   const [loaded, setLoaded] = useState(false);
   return (
-    <div className={style['mainBodyContainer']}>
+    <motion.div className={style['mainBodyContainer']}
+      style={{opacity: 0.8}}
+      whileHover={{opacity: 1}}
+      onHoverStart={()=>hoverAction()}>
       <div className={style['body']}>
         <Heading>
           {loaded? "Contact": <Name text="Contact" initSpeed={200} teardown={()=>setLoaded(true)}/>}
@@ -42,7 +46,7 @@ const Contact = ({setCmdText}) => {
           </div>
         </div>
      </div>
-    </div>
+    </motion.div>
   )
 }
 

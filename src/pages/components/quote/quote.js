@@ -7,8 +7,13 @@ const Quote = () => {
     <motion.div className={styles['container']}>
       <div className={styles['body']}>
         <div className={styles['quote']}>
-          "Lorem ipsum dolorom"
+          <q>
+            Any sufficiently advanced technology<br/> is indistinguishable from magic.
+          </q>
         </div>
+          <div className={styles['credit']}>
+            - Arthur C.
+          </div>
       </div>
     </motion.div>
   )

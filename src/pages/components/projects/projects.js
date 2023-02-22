@@ -33,10 +33,11 @@ const Projects = ({hoverAction}) => {
             I have worked on a lot of pet projects, some are publicly viewable on my github account.
             <Divider/>
             <div className={styles['projectList']}>
-              <ProjectCard name="Friday Bot"
-                tech={['python']}
-                subtitle="A Facebook Chatbot"/>
-
+              <motion.div>
+                <ProjectCard name="Friday Bot"
+                  tech={['python']}
+                  subtitle="A Facebook Chatbot"/>
+              </motion.div>
               <ProjectCard name="Inxscape" 
                 tech={['python']}
                 subtitle="Headless Web CMS Tool"/>

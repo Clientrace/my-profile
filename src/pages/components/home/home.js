@@ -12,8 +12,6 @@ import TopNav from '../topnav/topnav';
 const StickyBanner = () => {
   return (
     <motion.div
-      initial={{opacity: 0}}
-      animate={{opacity: 1}}
       transition={{duration: 0.5}}
       className={styles['stickyBanner']}>
       <TopNav showBrand/>
@@ -21,7 +19,7 @@ const StickyBanner = () => {
   )
 }
 
-const Home = ({setCmdText}) => {
+const Home = ({setCmdText, setCmdSticky}) => {
   const TOP_BANNER_OFFSET = -150;
   const pageRef = useRef(null);
   const [isSticky, setSticky] = useState(false);
@@ -30,6 +28,7 @@ const Home = ({setCmdText}) => {
   const handleScroll = () => {
     var scrollPos = getScrollPosition(pageRef.current).y;
     setSticky(scrollPos < TOP_BANNER_OFFSET);
+    setCmdSticky(scrollPos < TOP_BANNER_OFFSET);
   }
 
   useEffect(()=>{
