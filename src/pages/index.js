@@ -11,9 +11,6 @@ import Skills from './components/skills/skills';
 
 import { useInterval } from '../helper/delta-timer';
 import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import Name from './components/animations/name/name';
-import style from './main.module.scss';
 import Quote from './components/quote/quote';
 import CMD from './components/cmd/cmd';
 
@@ -33,8 +30,6 @@ const AppIndex = () => {
   const [animationFlag, setAnimationFlag] = useState(true);
 
   useEffect(()=>{
-    console.log('loading');
-
     const initFlag = sessionStorage.getItem('init') === 'true';
 
     // check if recently visited
@@ -93,6 +88,8 @@ const AppIndex = () => {
       </Head>
       {init && <>
         <Home
+          headingText="Kim Clarence Peñaflor"
+          subheadingText="<Full Stack Software Engineer/>"
           animationFlag={animationFlag}
           setCmdText={setInteractiveText}
           setCmdSticky={setCmdSticky}/>

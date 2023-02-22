@@ -19,11 +19,10 @@ const StickyBanner = () => {
   )
 }
 
-const Home = ({setCmdText, setCmdSticky, animationFlag}) => {
+const Home = ({headingText, subheadingText, setCmdText, setCmdSticky, animationFlag}) => {
   const TOP_BANNER_OFFSET = -150;
   const pageRef = useRef(null);
   const [isSticky, setSticky] = useState(false);
-  const NAME = 'Kim Clarence Peñaflor';
   const titleAnimation = animationFlag && {
     initial:{opacity: 0},
     animate:{opacity: 1},
@@ -55,7 +54,7 @@ const Home = ({setCmdText, setCmdSticky, animationFlag}) => {
       <div ref={pageRef} className={styles['mainBody']}>
         <div className={styles['mainTitle']}>
           <motion.h1 initial={{opacity: 0}} animate={{opacity: 1}} onHoverStart={()=>setCmdText("> Yep, that's my name")}>
-              <Name text={NAME} initSpeed={300}/>
+              <Name text={headingText} initSpeed={300}/>
           </motion.h1>
         </div>
         <motion.img
@@ -64,7 +63,7 @@ const Home = ({setCmdText, setCmdSticky, animationFlag}) => {
           src='/assets/logo.svg' className={styles['logo']}/>
         <div className={styles['mainSubtitle']}>
           <motion.h4 {...titleAnimation}>
-            <i>&lt; Full Stack Software Engineer /&gt;</i>
+            <i>{subheadingText}</i>
           </motion.h4>
         </div>
         <div className={styles['socMed']}>
