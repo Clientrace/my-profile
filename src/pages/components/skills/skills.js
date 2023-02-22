@@ -23,7 +23,7 @@ const GauageBar = ({title, meter}) => {
 }
 
 
-const Skills = ({hoverAction}) => {
+const Skills = ({hoverAction, animationFlag}) => {
   const [loaded, setLoaded] = useState(false);
 
   return (
@@ -33,7 +33,7 @@ const Skills = ({hoverAction}) => {
       whileHover={{opacity: 1}}>
       <div className={styles['body']}>
         <Heading>
-          { loaded? "Technical Skills":
+          { loaded || !animationFlag? "Technical Skills":
             <Name text="Technical Skills" initSpeed={100} teardown={()=>setLoaded(true)}/> }
         </Heading>
         <div className={styles['container']}>

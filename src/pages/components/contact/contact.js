@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 
-const Contact = ({setCmdText, hoverAction}) => {
+const Contact = ({setCmdText, hoverAction, animationFlag}) => {
   const [loaded, setLoaded] = useState(false);
   return (
     <motion.div className={style['mainBodyContainer']}
@@ -18,7 +18,7 @@ const Contact = ({setCmdText, hoverAction}) => {
       onHoverStart={()=>hoverAction()}>
       <div className={style['body']}>
         <Heading iconUrl="/assets/contact.svg">
-          {loaded? "Contact": <Name text="Contact" initSpeed={200} teardown={()=>setLoaded(true)}/>}
+          {loaded || !animationFlag? "Contact": <Name text="Contact" initSpeed={200} teardown={()=>setLoaded(true)}/>}
         </Heading>
         <div className={style['container']}>
           <div className={style['content']}>

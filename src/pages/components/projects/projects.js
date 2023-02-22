@@ -8,7 +8,7 @@ import Name from '../animations/name/name';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 
-const Projects = ({hoverAction}) => {
+const Projects = ({hoverAction, animationFlag}) => {
   const [loaded, setLoaded] = useState(false);
   return (
     <motion.div
@@ -16,7 +16,7 @@ const Projects = ({hoverAction}) => {
       className={styles['mainBodyContainer']} style={{opacity: 0.8}} whileHover={{opacity: 1}}>
       <div className={styles['body']}>
         <Heading iconUrl="/assets/folder.svg">
-          {loaded? "Projects": <Name text="Projects" initSpeed={200} teardown={()=>setLoaded(true)}/>}
+          {loaded||!animationFlag? "Projects": <Name text="Projects" initSpeed={200} teardown={()=>setLoaded(true)}/>}
         </Heading>
         <motion.div className={styles['container']} initial={{opacity: 0}} animate={{opacity: 1}}>
           <div className={styles['content']}>
