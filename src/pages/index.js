@@ -15,6 +15,7 @@ import { motion } from 'framer-motion';
 import Name from './components/animations/name/name';
 import style from './main.module.scss';
 import Quote from './components/quote/quote';
+import CMD from './components/cmd/cmd';
 
 const AppIndex = () => {
 
@@ -95,16 +96,12 @@ const AppIndex = () => {
           animationFlag={animationFlag}
           setCmdText={setInteractiveText}
           setCmdSticky={setCmdSticky}/>
-        <motion.div
-          initial={{opacity: 0}}
-          animate={{opacity: 1}}
-          className={style[cmdSticky?"command-sticky":"command"]}>
-          { commandFlag ? <Name text={cmdText}
-            initSpeed={100}
-            refSpeed={60}
-            teardown={()=>setCmdAccessFlag(true)}/>:initText }
-        </motion.div>
-
+        <CMD 
+          initText={initText}
+          showFlag={commandFlag}
+          setAccessFlag={setCmdAccessFlag}
+          cmdText={cmdText}
+          sticky={cmdSticky}/>
         { componentFlags[3]
           && <ProjectsSection
               animationFlag={animationFlag}
