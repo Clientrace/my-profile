@@ -8,8 +8,8 @@ const ProjectCard = ({name, bg, subtitle, tech}) => {
     return (
       <div>
         {
-          tech.map(data=>{
-            return <img src={`/assets/${data}.svg`}/>
+          tech.map((data, idx)=>{
+            return <img key={`proj-${idx}`} src={`/assets/${data}.svg`}/>
           })
         }
       </div>

@@ -21,7 +21,7 @@ const AppIndex = () => {
   const [cmdAccessFlag, setCmdAccessFlag] = useState(false);
 
   const [componentIdx, setComponentIdx] = useState(0);
-  const [componentFlags, setComponentFlags] = useState([false, false, false, true]);
+  const [componentFlags, setComponentFlags] = useState([false, false, false, false]);
   const [cmdText, setCmdText] = useState("> Let there be light");
 
   const [compRenderDelay, setCompRenderDelay] = useState(6800);

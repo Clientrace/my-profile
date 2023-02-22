@@ -37,7 +37,7 @@ const Name = ({initSpeed, text, teardown, refSpeed=100}) => {
   return <>
     { name.map((el, idx)=>{
       if(idx == name.length-1){
-        return <a style={{opacity: bleep?0:1}}>{el}</a>
+        return <a key={`nameid-${idx}`} style={{opacity: bleep?0:1}}>{el}</a>
       }
       return <>{el}</>
     }) }
