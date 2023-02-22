@@ -42,7 +42,7 @@ const Projects = ({hoverAction}) => {
               <motion.div initial={{scale: 0.9, opacity: 0}}
                 animate={{scale: 1, opacity: 1}} transition={{delay: 0.4}}>
                 <ProjectCard name="Inxscape" 
-                  tech={['python']}
+                  tech={['javascript', 'python']}
                   subtitle="Headless Web CMS Tool"/>
               </motion.div>
               <motion.div initial={{scale: 0.9, opacity: 0}}

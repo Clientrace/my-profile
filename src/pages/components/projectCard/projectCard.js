@@ -9,9 +9,7 @@ const ProjectCard = ({name, bg, subtitle, tech}) => {
       <div>
         {
           tech.map(data=>{
-            if(data === 'python'){
-              return <img src="/assets/python.svg"/>
-            }
+            return <img src={`/assets/${data}.svg`}/>
           })
         }
       </div>
