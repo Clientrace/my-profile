@@ -6,7 +6,7 @@ import Bar from './components/animations/bar/bar';
 import Head from 'next/head';
 
 import Contact from './components/contact/contact';
-import Projects from './components/projects/projects';
+import ProjectsSection from './components/projectsSection/projectsSection';
 import Skills from './components/skills/skills';
 
 import { useInterval } from '../helper/delta-timer';
@@ -106,7 +106,7 @@ const AppIndex = () => {
         </motion.div>
 
         { componentFlags[3]
-          && <Projects
+          && <ProjectsSection
               animationFlag={animationFlag}
               hoverAction={()=>setInteractiveText("> Browse my projects")}/> }
         { componentFlags[2]

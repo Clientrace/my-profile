@@ -2,13 +2,13 @@
 import Divider from '../divider/divider';
 import Heading from '../heading/heading';
 import Subheading from '../subheading/subheading';
-import styles from './projects.module.scss';
+import styles from './projectsSection.module.scss';
 import ProjectCard from '../projectCard/projectCard';
 import Name from '../animations/name/name';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 
-const Projects = ({hoverAction, animationFlag}) => {
+const ProjectsSection = ({hoverAction, animationFlag}) => {
   const [loaded, setLoaded] = useState(false);
   return (
     <motion.div
@@ -51,4 +51,4 @@ const Projects = ({hoverAction, animationFlag}) => {
 }
 
 
-export default Projects;
+export default ProjectsSection;
