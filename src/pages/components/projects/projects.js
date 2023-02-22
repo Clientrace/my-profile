@@ -8,15 +8,6 @@ import Name from '../animations/name/name';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 
-const Card = ({name, bg, children}) => {
-  return <div className={styles['card']}>
-    <ProjectCard name={name} bg={bg}>
-      { children }
-    </ProjectCard>
-  </div>
-}
-
-
 const Projects = ({hoverAction}) => {
   const [loaded, setLoaded] = useState(false);
   return (

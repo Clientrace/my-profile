@@ -3,7 +3,7 @@ import styles from './projectCard.module.scss';
 import {motion} from 'framer-motion';
 
 
-const ProjectCard = ({name, bg, subtitle, tech}) => {
+const ProjectCard = ({name, subtitle, tech=[]}) => {
   const renderTechIcons = () => {
     return (
       <div>
