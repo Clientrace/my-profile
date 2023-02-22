@@ -9,7 +9,6 @@ const ProjectCard = ({name, bg, subtitle, tech}) => {
       <div>
         {
           tech.map(data=>{
-            console.log(data);
             if(data === 'python'){
               return <img src="/assets/python.svg"/>
             }
@@ -20,8 +19,10 @@ const ProjectCard = ({name, bg, subtitle, tech}) => {
   }
   return (
     <motion.div
+      whileHover={{scale: 0.95}}
       style={{
         backgroundColor: 'black',
+        cursor: 'pointer'
       }}
       className={styles['mainBody']}>
       <div

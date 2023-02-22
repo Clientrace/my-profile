@@ -17,7 +17,7 @@ const Contact = ({setCmdText, hoverAction}) => {
       whileHover={{opacity: 1}}
       onHoverStart={()=>hoverAction()}>
       <div className={style['body']}>
-        <Heading>
+        <Heading iconUrl="/assets/contact.svg">
           {loaded? "Contact": <Name text="Contact" initSpeed={200} teardown={()=>setLoaded(true)}/>}
         </Heading>
         <div className={style['container']}>

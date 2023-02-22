@@ -33,19 +33,25 @@ const Projects = ({hoverAction}) => {
             I have worked on a lot of pet projects, some are publicly viewable on my github account.
             <Divider/>
             <div className={styles['projectList']}>
-              <motion.div>
+              <motion.div initial={{scale: 0.9, opacity: 0}}
+                animate={{scale: 1, opacity: 1}} transition={{delay: 0.2}}>
                 <ProjectCard name="Friday Bot"
                   tech={['python']}
                   subtitle="A Facebook Chatbot"/>
               </motion.div>
-              <ProjectCard name="Inxscape" 
-                tech={['python']}
-                subtitle="Headless Web CMS Tool"/>
-
-              <ProjectCard name="Pymicro" 
-                tech={['python']}
-                subtitle="Headless Web CMS Tool"/>
-            </div>
+              <motion.div initial={{scale: 0.9, opacity: 0}}
+                animate={{scale: 1, opacity: 1}} transition={{delay: 0.4}}>
+                <ProjectCard name="Inxscape" 
+                  tech={['python']}
+                  subtitle="Headless Web CMS Tool"/>
+              </motion.div>
+              <motion.div initial={{scale: 0.9, opacity: 0}}
+                animate={{scale: 1, opacity: 1}} transition={{delay: 0.6}}>
+                <ProjectCard name="Pymicro" 
+                  tech={['python']}
+                  subtitle="Microservice framework"/>
+              </motion.div>
+           </div>
           </div>
         </motion.div>
       </div>
