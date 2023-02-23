@@ -3,7 +3,7 @@ import styles from './projectCard.module.scss';
 import {motion} from 'framer-motion';
 
 
-const ProjectCard = ({name, subtitle, tech=[]}) => {
+const ProjectCard = ({name, subtitle, tech=[], linkoutUrl}) => {
   const renderTechIcons = () => {
     return (
       <div>
@@ -27,6 +27,13 @@ const ProjectCard = ({name, subtitle, tech=[]}) => {
         className={styles['overlay']}>
         <div>
            <b>{ name }</b>
+        </div>
+        <div className={styles['link-out']}>
+          <a href={linkoutUrl} target="_blank">
+            <motion.img 
+              whileHover={{scale: 1.2}}
+              src="/assets/link-out.svg"/>
+          </a>
         </div>
         <div className={styles['description']}>
           {subtitle}

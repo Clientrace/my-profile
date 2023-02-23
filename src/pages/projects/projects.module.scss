@@ -1,8 +1,8 @@
-@import '../../../styles/colors';
+
 
 .mainBodyContainer {
   width: 100%;
-  height: auto;
+  height: 80vh;
   padding-top: 30px;
   padding-top: 30px;
   padding-left: 15vw;
@@ -11,20 +11,12 @@
   .body {
     width: 100%;
     .projectList {
+      width: 100%;
       display: flex;
-      flex-direction: row;
+      flex-direction: right;
       flex-wrap: wrap;
-      .card {
-        margin-left: 5px;
-        margin-right: 5px;
-      }
     }
-    .viewMore {
-      .link{
-        color: black;
-        font-size: 13px;
-      }
-   }
   }
 }
+
 

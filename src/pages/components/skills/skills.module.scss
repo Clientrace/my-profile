@@ -15,6 +15,8 @@
       width: 100%;
       height: auto;
       display: flex;
+      flex-direction: right;
+      flex-wrap: wrap;
       .content {
         width: 50%;
         padding: 5px;
@@ -25,6 +27,7 @@
           }
         }
         .chart {
+          width: 50%;
           border-top-left-radius: 30px;
           padding: 30px;
           margin-left: 1em;

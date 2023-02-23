@@ -15,6 +15,12 @@
     padding: 1em;
     color: $white;
     background-color: $dark;
+    .link-out {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      img { width: 15px }
+    }
     .description {
       margin-top: 5px;
       font-size: 0.8em;
