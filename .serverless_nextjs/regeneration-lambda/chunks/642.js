@@ -58,7 +58,8 @@ const TopNav = ({ pageIndex , showBrand =false  })=>{
                     className: (_topnav_module_scss__WEBPACK_IMPORTED_MODULE_2___default().brand),
                     children: [
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
-                            src: "/assets/logo.svg"
+                            src: "/assets/logo.svg",
+                            alt: "main logo"
                         }),
                         "Kim Clarence Penaflor"
                     ]

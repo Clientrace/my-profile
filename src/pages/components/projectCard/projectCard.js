@@ -29,11 +29,12 @@ const ProjectCard = ({name, subtitle, tech=[], linkoutUrl}) => {
            <b>{ name }</b>
         </div>
         <div className={styles['link-out']}>
-          <a href={linkoutUrl} target="_blank">
+          <motion.a href={linkoutUrl} target="_blank">
             <motion.img 
+              alt="link out icon"
               whileHover={{scale: 1.2}}
               src="/assets/link-out.svg"/>
-          </a>
+          </motion.a>
         </div>
         <div className={styles['description']}>
           {subtitle}

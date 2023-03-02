@@ -202,7 +202,7 @@ const GauageBar = ({ title , meter  })=>{
         ]
     });
 };
-const Skills = ({ hoverAction  })=>{
+const Skills = ({ hoverAction , animationFlag  })=>{
     const { 0: loaded , 1: setLoaded  } = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(false);
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_9__/* .motion.div */ .E.div, {
         className: (_skills_module_scss__WEBPACK_IMPORTED_MODULE_8___default().mainBodyContainer),
@@ -217,7 +217,7 @@ const Skills = ({ hoverAction  })=>{
             className: (_skills_module_scss__WEBPACK_IMPORTED_MODULE_8___default().body),
             children: [
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_heading_heading__WEBPACK_IMPORTED_MODULE_1__["default"], {
-                    children: loaded ? "Technical Skills" : /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_animations_name_name__WEBPACK_IMPORTED_MODULE_6__["default"], {
+                    children: loaded || !animationFlag ? "Technical Skills" : /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_animations_name_name__WEBPACK_IMPORTED_MODULE_6__["default"], {
                         text: "Technical Skills",
                         initSpeed: 100,
                         teardown: ()=>setLoaded(true)

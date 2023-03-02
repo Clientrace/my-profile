@@ -9,6 +9,7 @@ exports.modules = {
 module.exports = {
 	"mainBody": "projectCard_mainBody__i2vhj",
 	"overlay": "projectCard_overlay__ekRYU",
+	"link-out": "projectCard_link-out__LNgsC",
 	"description": "projectCard_description__X0ZLW",
 	"red": "projectCard_red__kUvfN",
 	"tech": "projectCard_tech__pwItR",
@@ -33,7 +34,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const ProjectCard = ({ name , subtitle , tech =[]  })=>{
+const ProjectCard = ({ name , subtitle , tech =[] , linkoutUrl  })=>{
     const renderTechIcons = ()=>{
         return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
             children: tech.map((data, idx)=>{
@@ -58,6 +59,20 @@ const ProjectCard = ({ name , subtitle , tech =[]  })=>{
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("b", {
                         children: name
+                    })
+                }),
+                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                    className: (_projectCard_module_scss__WEBPACK_IMPORTED_MODULE_2___default()["link-out"]),
+                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_1__/* .motion.a */ .E.a, {
+                        href: linkoutUrl,
+                        target: "_blank",
+                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_1__/* .motion.img */ .E.img, {
+                            alt: "link out icon",
+                            whileHover: {
+                                scale: 1.2
+                            },
+                            src: "/assets/link-out.svg"
+                        })
                     })
                 }),
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {

@@ -6261,7 +6261,7 @@ module.exports = exports["default"];
 
 /***/ }),
 
-/***/ 8387:
+/***/ 857:
 /***/ ((module, exports, __webpack_require__) => {
 
 "use strict";
@@ -10070,7 +10070,7 @@ var _useCallbackRef = _interopRequireDefault(__webpack_require__(9065));
 var _useEventCallback = _interopRequireDefault(__webpack_require__(7738));
 var _useMergedRefs = _interopRequireDefault(__webpack_require__(6907));
 var _useWillUnmount = _interopRequireDefault(__webpack_require__(4383));
-var _transitionEnd = _interopRequireDefault(__webpack_require__(8387));
+var _transitionEnd = _interopRequireDefault(__webpack_require__(857));
 var React = _interopRequireWildcard(__webpack_require__(7294));
 var _Modal = _interopRequireDefault(__webpack_require__(7749));
 var _BootstrapModalManager = __webpack_require__(8862);
@@ -13807,7 +13807,7 @@ var _interopRequireDefault = __webpack_require__(4836);
 exports.__esModule = true;
 exports["default"] = transitionEndListener;
 var _css = _interopRequireDefault(__webpack_require__(6490));
-var _transitionEnd = _interopRequireDefault(__webpack_require__(8387));
+var _transitionEnd = _interopRequireDefault(__webpack_require__(857));
 function parseDuration(node, property) {
   const str = (0, _css.default)(node, property) || '';
   const mult = str.indexOf('ms') === -1 ? 1000 : 1;

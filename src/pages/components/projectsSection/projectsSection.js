@@ -47,9 +47,9 @@ const ProjectsSection = ({hoverAction, animationFlag}) => {
               </motion.div>
            </div>
            <div className={styles['viewMore']}>
-            <a href="/projects" className={styles['link']}>
+            <motion.a href="/projects" className={styles['link']}>
               {/* View More */}
-            </a>
+            </motion.a>
            </div>
           </div>
         </motion.div>

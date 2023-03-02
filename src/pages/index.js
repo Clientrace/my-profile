@@ -24,7 +24,7 @@ const AppIndex = () => {
   const [componentFlags, setComponentFlags] = useState([false, false, false, false]);
 
   const [init, setInit] = useState(false);
-  const [initText, setInitText] = useState("> Hello friend. Let me introduct myself.");
+  const [initText, setInitText] = useState("> Hello friend. Let me introduce myself.");
   const [cmdText, setCmdText] = useState("> Let there be light");
   const [compRenderDelay, setCompRenderDelay] = useState(6800);
   const [animationFlag, setAnimationFlag] = useState(true);

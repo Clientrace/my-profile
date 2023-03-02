@@ -22,7 +22,7 @@ const TopNav = ({pageIndex, showBrand=false}) => {
     <Navbar expand="lg" variant="dark" className="mr-auto">
       <Navbar.Toggle aria-controls='responsive-navbar-nav'/>
       {showBrand && <Navbar.Brand className={styles['brand']}>
-        <img src='/assets/logo.svg'/>
+        <img src='/assets/logo.svg' alt="main logo"/>
         Kim Clarence Penaflor
       </Navbar.Brand>}
       <Navbar.Collapse>

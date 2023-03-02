@@ -143,10 +143,32 @@ const StickyBanner = ()=>{
         })
     });
 };
-const Home = ({ setCmdText , setCmdSticky  })=>{
+const Home = ({ headingText , subheadingText , setCmdText , setCmdSticky , animationFlag  })=>{
     const TOP_BANNER_OFFSET = -150;
     const pageRef = (0,react.useRef)(null);
     const { 0: isSticky , 1: setSticky  } = (0,react.useState)(false);
+    const titleAnimation = animationFlag && {
+        initial: {
+            opacity: 0
+        },
+        animate: {
+            opacity: 1
+        },
+        transition: {
+            delay: 5
+        }
+    };
+    const logoAnimation = animationFlag && {
+        initial: {
+            opacity: 0
+        },
+        animate: {
+            opacity: 0.1
+        },
+        transition: {
+            delay: 5
+        }
+    };
     const handleScroll = ()=>{
         var scrollPos = helper_scrollPos(pageRef.current).y;
         setSticky(scrollPos < TOP_BANNER_OFFSET);
@@ -155,7 +177,9 @@ const Home = ({ setCmdText , setCmdSticky  })=>{
     (0,react.useEffect)(()=>{
         window.addEventListener("scroll", handleScroll);
         window.removeEventListener("scroll", ()=>handleScroll);
-    }, []);
+    }, [
+        handleScroll
+    ]);
     return /*#__PURE__*/ (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
         children: [
             /*#__PURE__*/ jsx_runtime.jsx("div", {
@@ -177,21 +201,13 @@ const Home = ({ setCmdText , setCmdSticky  })=>{
                             },
                             onHoverStart: ()=>setCmdText("> Yep, that's my name"),
                             children: /*#__PURE__*/ jsx_runtime.jsx(name_name["default"], {
-                                text: "Kim Clarence Pe\xf1aflor",
+                                text: headingText,
                                 initSpeed: 300
                             })
                         })
                     }),
                     /*#__PURE__*/ jsx_runtime.jsx(motion/* motion.img */.E.img, {
-                        initial: {
-                            opacity: 0
-                        },
-                        animate: {
-                            opacity: 0.1
-                        },
-                        transition: {
-                            delay: 5
-                        },
+                        ...logoAnimation,
                         onHoverStart: ()=>setCmdText("> Awesome logo?"),
                         src: "/assets/logo.svg",
                         className: (home_module_default()).logo
@@ -199,17 +215,9 @@ const Home = ({ setCmdText , setCmdSticky  })=>{
                     /*#__PURE__*/ jsx_runtime.jsx("div", {
                         className: (home_module_default()).mainSubtitle,
                         children: /*#__PURE__*/ jsx_runtime.jsx(motion/* motion.h4 */.E.h4, {
-                            initial: {
-                                opacity: 0
-                            },
-                            animate: {
-                                opacity: 1
-                            },
-                            transition: {
-                                delay: 5
-                            },
+                            ...titleAnimation,
                             children: /*#__PURE__*/ jsx_runtime.jsx("i", {
-                                children: "< Full Stack Software Engineer />"
+                                children: subheadingText
                             })
                         })
                     }),
@@ -220,25 +228,25 @@ const Home = ({ setCmdText , setCmdSticky  })=>{
                                 onHoverStart: ()=>setCmdText("> Jump to my facebook profile"),
                                 src: "/assets/facebook.svg",
                                 url: "https://web.facebook.com/kcpenaflor11",
-                                delay: 5.2
+                                delay: animationFlag ? 5.2 : 0.1
                             }),
                             /*#__PURE__*/ jsx_runtime.jsx(icon["default"], {
                                 onHoverStart: ()=>setCmdText("> Jump to my github page"),
                                 src: "/assets/github.svg",
                                 url: "https://github.com/Clientrace",
-                                delay: 5.4
+                                delay: animationFlag ? 5.4 : 0.2
                             }),
                             /*#__PURE__*/ jsx_runtime.jsx(icon["default"], {
                                 onHoverStart: ()=>setCmdText("> View my linkedin page"),
                                 src: "/assets/linkedin.svg",
                                 url: "https://www.linkedin.com/in/kcpenaflor",
-                                delay: 5.6
+                                delay: animationFlag ? 5.6 : 0.3
                             }),
                             /*#__PURE__*/ jsx_runtime.jsx(icon["default"], {
                                 onHoverStart: ()=>setCmdText("> Visit my instagram"),
                                 src: "/assets/instagram.svg",
                                 url: "https://www.instagram.com/kcpenaflor/",
-                                delay: 5.8
+                                delay: animationFlag ? 5.8 : 0.4
                             })
                         ]
                     })

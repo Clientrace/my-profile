@@ -28,6 +28,7 @@ const Home = ({headingText, subheadingText, setCmdText, setCmdSticky, animationF
     animate:{opacity: 1},
     transition: {delay: 5}
   };
+
   const logoAnimation = animationFlag && {
     initial:{opacity: 0},
     animate:{opacity: 0.1},
@@ -43,7 +44,7 @@ const Home = ({headingText, subheadingText, setCmdText, setCmdSticky, animationF
   useEffect(()=>{
     window.addEventListener('scroll', handleScroll);
     window.removeEventListener('scroll', ()=>handleScroll);
-  }, []);
+  }, [handleScroll]);
 
   
   return (

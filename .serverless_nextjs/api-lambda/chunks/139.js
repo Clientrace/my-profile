@@ -37,6 +37,7 @@ const Icon = ({ src , url , delay , onHoverStart  })=>{
             href: url,
             target: "_blank",
             children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_1__/* .motion.img */ .E.img, {
+                alt: url,
                 onHoverStart: onHoverStart,
                 initial: {
                     scale: 1.3,
@@ -57,6 +58,7 @@ const Icon = ({ src , url , delay , onHoverStart  })=>{
             })
         }) : /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_1__/* .motion.img */ .E.img, {
             src: src,
+            alt: "tech image",
             className: (_icon_module_scss__WEBPACK_IMPORTED_MODULE_2___default().image)
         })
     });

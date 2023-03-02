@@ -42,7 +42,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const Contact = ({ setCmdText , hoverAction  })=>{
+const Contact = ({ setCmdText , hoverAction , animationFlag  })=>{
     const { 0: loaded , 1: setLoaded  } = (0,react__WEBPACK_IMPORTED_MODULE_6__.useState)(false);
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_7__/* .motion.div */ .E.div, {
         className: (_contact_module_scss__WEBPACK_IMPORTED_MODULE_8___default().mainBodyContainer),
@@ -58,7 +58,7 @@ const Contact = ({ setCmdText , hoverAction  })=>{
             children: [
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_heading_heading__WEBPACK_IMPORTED_MODULE_2__["default"], {
                     iconUrl: "/assets/contact.svg",
-                    children: loaded ? "Contact" : /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_animations_name_name__WEBPACK_IMPORTED_MODULE_4__["default"], {
+                    children: loaded || !animationFlag ? "Contact" : /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_animations_name_name__WEBPACK_IMPORTED_MODULE_4__["default"], {
                         text: "Contact",
                         initSpeed: 200,
                         teardown: ()=>setLoaded(true)
