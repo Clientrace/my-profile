@@ -14,7 +14,6 @@ const CMD = ({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.2 }}
-      // className={styles[sticky ? "command-sticky" : "command"]}
       className={
         sticky
           ? `${styles["command-sticky"]} fixed w-full align-center text-center text-white`
