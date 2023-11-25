@@ -12,7 +12,6 @@ const Home = ({
   setCmdSticky,
   animationFlag,
 }) => {
-  animationFlag = true;
   const titleAnimation = animationFlag && {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
@@ -35,7 +34,7 @@ const Home = ({
           </div>
         </motion.h1>
       </div>
-      <div className={styles["mainSubtitle"]}>
+      <div className={`${styles["mainSubtitle"]} -mt-2 sm:mt-0`}>
         <motion.h4 {...titleAnimation}>
           <div className="text-sm sm:text-lg">{subheadingText}</div>
         </motion.h4>
