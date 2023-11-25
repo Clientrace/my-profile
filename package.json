@@ -9,13 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "autoprefixer": "^9.8.8",
     "framer-motion": "^7.4.0",
     "next": "12.3.1",
+    "postcss": "^7.0.39",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-github-graph": "^1.5.2",
     "sass": "^1.58.3",
-    "serverless": "^3.23.0"
+    "serverless": "^3.23.0",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
   },
   "devDependencies": {
     "bootstrap": "^5.2.1",
