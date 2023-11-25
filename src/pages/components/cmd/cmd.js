@@ -16,8 +16,8 @@ const CMD = ({
       transition={{ duration: 0.2 }}
       className={
         sticky
-          ? `${styles["command-sticky"]} fixed w-full align-center text-center text-white`
-          : `${styles["command"]} text-white text-center align-center`
+          ? `${styles["command-sticky"]} fixed w-full align-center text-center text-white h-8`
+          : `${styles["command"]} text-white text-center align-center h-8`
       }
     >
       {showFlag ? (
