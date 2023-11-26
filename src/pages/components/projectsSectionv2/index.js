@@ -29,15 +29,36 @@ const ProjectSection = ({ hoverAction, animationFlag }) => {
           )}
         </Heading>
         <Divider />
-        <div className="flex flex-row gap-x-2">
+        <div className="flex flex-wrap w-full gap-2 scroll-smooth overflow-auto">
           <ProjectCard
             name="Friday Chatbot"
             imageUrl="/assets/friday.png"
             platform="Facebook"
+            year="2018"
             tech={["python"]}
           >
             A facebook messenger chatbot for answer simple search queries.
             Heavily relies on messenger API.
+          </ProjectCard>
+          <ProjectCard
+            name="Pymicro"
+            imageUrl="/assets/friday.png"
+            platform="AWS Lambda"
+            year="2022"
+            tech={["python"]}
+          >
+            Serverless AWS Framework for creating API. Has it's own CLI for code
+            scaffolding.
+          </ProjectCard>
+          <ProjectCard
+            name="Inxscape"
+            imageUrl="/assets/friday.png"
+            platform="Web Application"
+            year="2020"
+            tech={["python"]}
+          >
+            Headless Web Content Management Tool that utilizes Markdown to
+            generate content.
           </ProjectCard>
         </div>
       </div>
