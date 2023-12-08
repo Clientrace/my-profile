@@ -42,7 +42,7 @@ const ProjectSection = ({ hoverAction, animationFlag }) => {
           </ProjectCard>
           <ProjectCard
             name="Pymicro"
-            imageUrl="/assets/friday.png"
+            imageUrl="/assets/pymicro.png"
             platform="AWS Lambda"
             year="2022"
             tech={["python"]}
@@ -52,7 +52,7 @@ const ProjectSection = ({ hoverAction, animationFlag }) => {
           </ProjectCard>
           <ProjectCard
             name="Inxscape"
-            imageUrl="/assets/friday.png"
+            imageUrl="/assets/inxscape.png"
             platform="Web Application"
             year="2020"
             tech={["python"]}
