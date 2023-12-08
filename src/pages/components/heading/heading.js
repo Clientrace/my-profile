@@ -14,7 +14,7 @@ const Heading = ({
             <Icon src={iconUrl ? iconUrl : "/assets/block.svg"} small />
           </div>
           <diV className="text-base sm:text-3xl tracking-wider">
-            {children}
+            <div className="font-bold sm:font-normal">{children}</div>
             <div className="sm:text-sm text-xs mt-0 sm:mt-1">{subtitle}</div>
           </diV>
         </div>
