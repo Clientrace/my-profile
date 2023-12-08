@@ -21,7 +21,6 @@ const Home = ({
   return (
     <div
       className={`${styles["Main"]} flex w-full text-white justify-center align-center text-center flex-col`}
-      style={{ height: "30vh" }}
     >
       <div className="tracking-wider">
         <motion.h1
