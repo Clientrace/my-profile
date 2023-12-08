@@ -7,21 +7,27 @@ export const ProjectCard = ({
   platform,
   children,
   tech = [],
+  year,
   linkoutUrl,
 }) => {
   const renderTechIcons = () => {
     return (
       <div>
         {tech.map((data, idx) => {
-          return <img key={`proj-${idx}`} src={`/assets/${data}.svg`} />;
+          return (
+            <img
+              className="h-6"
+              key={`proj-${idx}`}
+              src={`/assets/${data}.svg`}
+            />
+          );
         })}
       </div>
     );
   };
   return (
     <motion.div
-      whileHover={{ opacity: 0.9 }}
-      className="p-6 relative w-72 shadow-md cursor-pointer"
+      className="p-6 w-72 shadow-lg cursor-pointer"
       style={{ backgroundColor: "#222222" }}
     >
       <div className="flex space-x-2">
@@ -30,15 +36,22 @@ export const ProjectCard = ({
             <img src={imageUrl} className="rounded-full w-12 h-12" />
           </div>
         </div>
-        <div className="text-sm text-gray-200">2018</div>
+        <div className="text-sm text-gray-200">{year}</div>
       </div>
       <div>
         <div className="text-xs text-gray-300 mt-2">{platform}</div>
         <div className="text-base text-white font-bold tracking-wide">
           {name}
         </div>
-        <div className="mt-2 text-gray-200 text-sm">{children}</div>
-        <div>{renderTechIcons()}</div>
+        <div className="mt-2 text-gray-200 text-sm h-20">
+          {children}
+          <div className="mt-2">
+            <div className="mt-2">{renderTechIcons()}</div>
+          </div>
+        </div>
+        <div className="flex text-white items-end justify-end h-12">
+          <div className="text-sm">View Project</div>
+        </div>
       </div>
     </motion.div>
   );
