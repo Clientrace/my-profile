@@ -1,7 +1,7 @@
 import styles from "./icon.module.scss";
 import { motion } from "framer-motion";
 
-const Icon = ({ src, url, delay, onHoverStart, size = "35px" }) => {
+const Icon = ({ src, url, delay, onHoverStart, small = false }) => {
   return (
     <>
       {url ? (
@@ -13,12 +13,16 @@ const Icon = ({ src, url, delay, onHoverStart, size = "35px" }) => {
             animate={{ scale: 1, opacity: 1 }}
             whileHover={{ scale: 1.2 }}
             transition={{ delay: delay }}
+            className={small ? "w-4 h-4" : "w-8 h-8"}
             src={src}
-            style={{ width: size }}
           />
         </motion.a>
       ) : (
-        <motion.img src={src} alt="tech image" className={{ width: size }} />
+        <motion.img
+          src={src}
+          alt="tech image"
+          className={small ? "w-4 h-4" : "w-8 h-8"}
+        />
       )}
     </>
   );
