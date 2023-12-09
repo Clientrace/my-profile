@@ -24,7 +24,7 @@ const Skills = ({ hoverAction, animationFlag }) => {
   return (
     <SectionWrapper hoverAction={hoverAction}>
       <Heading>Technical Skills</Heading>
-      <div className="w-full flex flex-col sm:flex-row">
+      <div className="w-full flex flex-col sm:flex-row md:flex-col lg:flex-col xl:flex-row">
         <div className="w-full">
           <div className="w-full">
             <Subheading>Basic (Languages, Styling and Databases):</Subheading>
@@ -46,7 +46,7 @@ const Skills = ({ hoverAction, animationFlag }) => {
           </div>
           <Divider />
         </div>
-        <div className="w-full px-2 sm:mt-2">
+        <div className="w-full px-0 sm:px-2 sm:mt-2">
           <div className="py-4 px-10" style={{ backgroundColor: "#222" }}>
             <div className="text-white my-2">
               <div className="text-base">Language Mastery Chart</div>
