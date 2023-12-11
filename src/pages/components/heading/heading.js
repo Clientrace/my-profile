@@ -2,7 +2,7 @@ import Icon from "../../components/icon/icon";
 
 const Heading = ({
   children,
-  description = "'",
+  description = "",
   subtitle = "",
   iconUrl = null,
 }) => {
