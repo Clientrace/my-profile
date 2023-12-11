@@ -13,7 +13,7 @@ const ProjectSection = ({ hoverAction, animationFlag }) => {
     <SectionWrapper hoverAction={hoverAction}>
       <Heading
         subtitle="Personal Projects/Pet Projects"
-        description="I have worked on a lot of pet projects, some are publicly viewable on my github account. Here are top 3 of my projects:"
+        description="Worked on a lot of pet projects, some are publicly viewable on my github account. Here are top 3 of my projects:"
         iconUrl="/assets/folder.svg"
         desc
       >
@@ -28,7 +28,7 @@ const ProjectSection = ({ hoverAction, animationFlag }) => {
         )}
       </Heading>
       <Divider />
-      <div className="flex flex-wrap w-full gap-2 scroll-smooth overflow-auto">
+      <div className="flex flex-wrap w-full gap-2 scroll-smooth overflow-auto items-center justify-center">
         <ProjectCard
           name="Friday Chatbot"
           imageUrl="/assets/friday.png"
