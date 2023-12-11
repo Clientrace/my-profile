@@ -6,7 +6,12 @@ import SectionWrapper from "../sectionWrapper";
 const Contact = ({ setCmdText, hoverAction, animationFlag }) => {
   return (
     <SectionWrapper hoverAction={hoverAction}>
-      <Heading subtitle="You can reach me via the following:">Contact</Heading>
+      <Heading
+        iconUrl="/assets/contact.svg"
+        subtitle="You can reach me via the following:"
+      >
+        Contact
+      </Heading>
       <Divider />
       <div className="w-full">
         <div>Email: kimc.penalfor@gmail.com</div>
