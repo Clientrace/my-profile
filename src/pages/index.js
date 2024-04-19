@@ -1,6 +1,5 @@
 import TopNav from "./components/topnav/topnav";
 import Home from "./components/homev2";
-import Graph from "./components/graph/graph";
 import Bar from "./components/animations/bar/bar";
 import Head from "next/head";
 
