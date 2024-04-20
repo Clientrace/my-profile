@@ -5,6 +5,7 @@
 /node_modules
 /.pnp
 .pnp.js
+.serverless_nextjs
 
 # testing
 /coverage
