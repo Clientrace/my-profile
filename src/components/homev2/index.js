@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 
-import getScrollPosition from "../../../helper/scrollPos";
+import getScrollPosition from "../../helper/scrollPos";
 import Icon from "../../components/icon/icon";
 import Name from "../animations/name/name";
 import styles from "./styles.module.scss";

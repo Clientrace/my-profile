@@ -1,17 +1,16 @@
-import TopNav from "./components/topnav/topnav";
-import Home from "./components/homev2";
-import Bar from "./components/animations/bar/bar";
+import Home from "../components/homev2";
 import Head from "next/head";
 
 import { useInterval } from "../helper/delta-timer";
 import { useEffect, useState } from "react";
 
-import ProjectsSection from "./components/projectsSectionv2";
-import Contact from "./components/contactv2";
-import Skills from "./components/skillsv2";
-import Quote from "./components/quotev2";
 
-import CMD from "./components/cmd/cmd";
+import Quote from "../components/quotev2";
+import Contact from "../components/contactv2";
+import Skills from "../components/skillsv2";
+import CMD from "../components/cmd/cmd";
+
+import ProjectsSection from "../components/projectsSectionv2";
 
 const AppIndex = () => {
   const [cmdSticky, setCmdSticky] = useState(false);

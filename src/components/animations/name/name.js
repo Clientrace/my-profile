@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import { useInterval } from "../../../../helper/delta-timer";
+import { useInterval } from "../../../helper/delta-timer";
 
 const Name = ({initSpeed, text="", teardown, refSpeed=100}) => {
   let fullname = [];
