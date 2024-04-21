@@ -1,15 +1,17 @@
+import { useState } from "react";
+import { motion } from "framer-motion";
 
 import Head from "next/head";
-// import Home from "../components/home/home";
-import Home from "../components/homev2";
-import CMD from "../components/cmd/cmd";
+import Home from "../../components/homev2";
+import CMD from "../../components/cmd/cmd";
+
 import styles from "./projects.module.scss";
-import { useState } from "react";
-import Heading from "../components/heading/heading";
-import Subheading from "../components/subheading/subheading";
-import ProjectCard from "../components/projectCard/projectCard";
-import { motion } from "framer-motion";
-import Divider from "../components/divider/divider";
+
+import Heading from "../../components/heading/heading";
+import Subheading from "../../components/subheading/subheading";
+
+
+import Divider from "../../components/divider/divider";
 
 
 const Projects = () => {
