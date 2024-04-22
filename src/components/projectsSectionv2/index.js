@@ -30,6 +30,7 @@ const ProjectSection = ({ hoverAction, animationFlag }) => {
       <Divider />
       <div className="flex flex-wrap w-full gap-2 scroll-smooth overflow-auto items-center justify-center">
         <ProjectCard
+          linkoutUrl="/projects/friday-bot"
           name="Friday Chatbot"
           imageUrl="/assets/friday.png"
           platform="Facebook"
