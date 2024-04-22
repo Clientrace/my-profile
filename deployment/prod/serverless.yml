@@ -1,0 +1,20 @@
+
+app:
+  component: "@sls-next/serverless-component@1.18"
+  inputs:
+    runtime: 
+      defaultLambda: "nodejs16.x"
+      apiLambda: "nodejs16.x"
+    nextConfigDir: "../../"
+    bucketName: clarence-webprofile-prod
+    bucketRegion: ap-southeast-1
+    cloudfront:
+      distributionId: E1X57TBRF98HT
+    cors:
+      - enabled: true
+    build:
+      env:
+        STAGE: prod
+
+
+        

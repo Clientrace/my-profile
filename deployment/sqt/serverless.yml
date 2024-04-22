@@ -1,0 +1,15 @@
+
+app:
+  component: "@sls-next/serverless-component@1.17.0-alpha.7"
+  inputs:
+    nextConfigDir: "../../"
+    bucketName: tac-pr-web-sqt
+    bucketRegion: ap-southeast-1
+    cors:
+      - enabled: true
+    build:
+      env:
+        STAGE: sqt
+        CMS_HOST_URL: 'https://0vzp8dtmmb.execute-api.ap-southeast-1.amazonaws.com/prod'
+        BUCKET_URL: 'https://d74exbjsw77yd.cloudfront.net/'
+
