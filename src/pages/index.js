@@ -109,7 +109,7 @@ const AppIndex = () => {
             sticky={cmdSticky}
           />
 
-          <div className="px-6 sm:px-20 md:px-40 py-4 sm:py-10 bg-red">
+          <div className="px-6 sm:px-20 md:px-40 py-4 sm:py-10 bg-white">
             {componentFlags[3] && (
               <ProjectsSection
                 animationFlag={animationFlag}
