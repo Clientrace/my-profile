@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
+
 
 export const ProjectCard = ({
   name,
@@ -9,6 +11,8 @@ export const ProjectCard = ({
   year,
   linkoutUrl,
 }) => {
+  const router = useRouter();
+
   const renderTechIcons = () => {
     return (
       <div>
@@ -26,6 +30,11 @@ export const ProjectCard = ({
   };
   return (
     <motion.div
+      onClick={() => {
+        if (linkoutUrl) {
+          router.push(linkoutUrl)
+        }
+      }}
       className="p-6 w-72 shadow-lg cursor-pointer"
       style={{ backgroundColor: "#222222" }}
     >
