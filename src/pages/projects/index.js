@@ -10,16 +10,14 @@ import styles from "./projects.module.scss";
 import Heading from "../../components/heading/heading";
 import Subheading from "../../components/subheading/subheading";
 
-
 import Divider from "../../components/divider/divider";
-
 
 const Projects = () => {
   const [cmdText, setCmdText] = useState("> Browse projects");
   const [cmdSticky, setCmdSticky] = useState(false);
   const [cmdAccessFlag, setCmdAccessFlag] = useState(false);
   const setInteractiveText = (text) => {
-    if(cmdAccessFlag){
+    if (cmdAccessFlag) {
       setCmdText(text);
     }
   }
@@ -33,12 +31,12 @@ const Projects = () => {
       subheadingText="<Tech Stuff & more/>"
       animationFlag={false}
       setCmdText={setInteractiveText}
-      setCmdSticky={setCmdSticky}/>
-    <CMD 
+      setCmdSticky={setCmdSticky} />
+    <CMD
       showFlag={true}
       setAccessFlag={setCmdAccessFlag}
       cmdText={cmdText}
-      sticky={cmdSticky}/>
+      sticky={cmdSticky} />
     <div className={styles['mainBodyContainer']}>
       <div className={styles['body']}>
         <Heading iconUrl="/assets/folder.svg">
@@ -49,11 +47,11 @@ const Projects = () => {
             Click a project to learn more about it
           </Subheading>
         </div>
-        <Divider/>
+        <Divider />
         <div className={styles['']}>
-            <div className={styles['projectList']}>
-              
-            </div>
+          <div className={styles['projectList']}>
+
+          </div>
         </div>
       </div>
     </div>
