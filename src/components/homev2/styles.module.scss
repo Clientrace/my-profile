@@ -1,0 +1,12 @@
+@import "../../styles/colors";
+
+.Main {
+  background-color: $dark;
+  height: 30vh;
+}
+
+@media only screen and (max-width: 600px) {
+  .Main {
+    height: 95vh;
+  }
+}

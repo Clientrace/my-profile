@@ -1,0 +1,11 @@
+@import "../../styles/colors";
+
+.command {
+  background-color: $dark;
+}
+
+.command-sticky {
+  background-color: $dark;
+  z-index: 10;
+  top: 8vh;
+}
