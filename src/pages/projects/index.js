@@ -9,6 +9,7 @@ import styles from "./projects.module.scss";
 
 import Heading from "../../components/heading/heading";
 import Subheading from "../../components/subheading/subheading";
+import Navigator from "../../components/navigator";
 
 import Divider from "../../components/divider/divider";
 
@@ -39,6 +40,7 @@ const Projects = () => {
       sticky={cmdSticky} />
     <div className={styles['mainBodyContainer']}>
       <div className={styles['body']}>
+        <Navigator index="/projects" />
         <Heading iconUrl="/assets/folder.svg">
           All projects
         </Heading>
