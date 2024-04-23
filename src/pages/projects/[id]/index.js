@@ -5,6 +5,8 @@ import Markdown from "react-markdown";
 import Icon from "../../../components/icon/icon";
 import Divider from "../../../components/divider/divider";
 import dynamic from "next/dynamic";
+import styles from "./markdown.module.scss";
+
 
 const ReactMarkdown = dynamic(() => import('react-markdown'), { ssr: false })
 const s3HostUrl = "https://clarence-webprofile-articles.s3.ap-southeast-1.amazonaws.com/projects";
@@ -58,9 +60,11 @@ const ProjectDescription = (props) => {
         </div>
         <Divider />
         <div className="w-full mt-4">
-          <ReactMarkdown>
-            {mdText}
-          </ReactMarkdown>
+          <div className={styles["markdown"]}>
+            <ReactMarkdown>
+              {mdText}
+            </ReactMarkdown>
+          </div>
         </div>
       </div>
     </div>
