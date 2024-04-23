@@ -7,6 +7,7 @@ import Divider from "../../../components/divider/divider";
 import dynamic from "next/dynamic";
 import styles from "./markdown.module.scss";
 import Navigator from "../../../components/navigator";
+import Footer from "../../../components/footer";
 
 
 const ReactMarkdown = dynamic(() => import('react-markdown'), { ssr: false })
@@ -69,6 +70,7 @@ const ProjectDescription = (props) => {
         </div>
       </div>
     </div>
+    <Footer />
 
   </div>
 }
