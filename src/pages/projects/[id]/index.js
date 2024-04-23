@@ -6,6 +6,7 @@ import Icon from "../../../components/icon/icon";
 import Divider from "../../../components/divider/divider";
 import dynamic from "next/dynamic";
 import styles from "./markdown.module.scss";
+import Navigator from "../../../components/navigator";
 
 
 const ReactMarkdown = dynamic(() => import('react-markdown'), { ssr: false })
@@ -42,9 +43,9 @@ const ProjectDescription = (props) => {
       <title>Project</title>
     </Head>
     <Banner route="<Project/>" />
-
     <div className="flex justify-center px-6 sm:px-40 md:px-40 py-4 sm:py-10 bg-white mt-20">
       <div className="max-w-2xl">
+        <Navigator />
         <div className="flex w-full gap-x-4">
           <div>
             <Icon src="/assets/folder.svg" />
@@ -68,6 +69,7 @@ const ProjectDescription = (props) => {
         </div>
       </div>
     </div>
+
   </div>
 }
 
