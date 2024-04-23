@@ -33,10 +33,10 @@ const Home = ({
     transition: { delay: 5 },
   };
 
-  useEffect(()=>{
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     window.removeEventListener("scroll", () => handleScroll())
-  },[])
+  }, [])
 
   return (
     <>
@@ -87,7 +87,7 @@ const Home = ({
           />
         </div>
       </div>
-      {isSticky && <Banner/>}
+      {isSticky && <Banner route="<Home/>" />}
     </>
   );
 };
