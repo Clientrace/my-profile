@@ -39,7 +39,7 @@ const ProjectDescription = (props) => {
     <Head>
       <title>Project</title>
     </Head>
-    <Banner />
+    <Banner route="<Project/>" />
 
     <div className="flex justify-center px-6 sm:px-40 md:px-40 py-4 sm:py-10 bg-white mt-20">
       <div className="max-w-2xl">
