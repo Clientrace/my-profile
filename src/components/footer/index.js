@@ -2,7 +2,7 @@
 import Icon from "../icon/icon";
 
 const Footer = () => {
-  return <div className="w-full flex justify-center p-20">
+  return <div className="w-full flex justify-center p-20 bg-white">
     <div className="flex w-fit px-12 gap-x-4">
       <img src="/assets/profile.jpeg" className="w-24 h-24" />
       <div className="w-full">
