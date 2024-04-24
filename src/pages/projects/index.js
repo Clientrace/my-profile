@@ -9,8 +9,10 @@ import styles from "./projects.module.scss";
 
 import Heading from "../../components/heading/heading";
 import Subheading from "../../components/subheading/subheading";
+import Navigator from "../../components/navigator";
 
 import Divider from "../../components/divider/divider";
+import { ProjectCard } from "../../components/projectsSectionv2/components/projectCard";
 
 const Projects = () => {
   const [cmdText, setCmdText] = useState("> Browse projects");
@@ -39,6 +41,7 @@ const Projects = () => {
       sticky={cmdSticky} />
     <div className={styles['mainBodyContainer']}>
       <div className={styles['body']}>
+        <Navigator index="/projects" />
         <Heading iconUrl="/assets/folder.svg">
           All projects
         </Heading>
@@ -50,7 +53,37 @@ const Projects = () => {
         <Divider />
         <div className={styles['']}>
           <div className={styles['projectList']}>
-
+            <ProjectCard
+              linkoutUrl="/projects/friday-bot"
+              name="Friday Chatbot"
+              imageUrl="/assets/friday.png"
+              platform="Facebook"
+              year="2018"
+              tech={["python"]}
+            >
+              A facebook messenger chatbot for answer simple search queries. Heavily
+              relies on messenger API.
+            </ProjectCard>
+            <ProjectCard
+              name="Pymicro"
+              imageUrl="/assets/pymicro.png"
+              platform="AWS Lambda"
+              year="2022"
+              tech={["python"]}
+            >
+              Serverless AWS Framework for creating API. Has it's own CLI for code
+              scaffolding.
+            </ProjectCard>
+            <ProjectCard
+              name="Inxscape"
+              imageUrl="/assets/inxscape.png"
+              platform="Web Application"
+              year="2020"
+              tech={["python"]}
+            >
+              Headless Web Content Management Tool that utilizes Markdown to
+              generate content.
+            </ProjectCard>
           </div>
         </div>
       </div>

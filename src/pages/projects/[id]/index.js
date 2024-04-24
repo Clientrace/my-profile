@@ -5,6 +5,10 @@ import Markdown from "react-markdown";
 import Icon from "../../../components/icon/icon";
 import Divider from "../../../components/divider/divider";
 import dynamic from "next/dynamic";
+import styles from "./markdown.module.scss";
+import Navigator from "../../../components/navigator";
+import Footer from "../../../components/footer";
+
 
 const ReactMarkdown = dynamic(() => import('react-markdown'), { ssr: false })
 const s3HostUrl = "https://clarence-webprofile-articles.s3.ap-southeast-1.amazonaws.com/projects";
@@ -39,10 +43,10 @@ const ProjectDescription = (props) => {
     <Head>
       <title>Project</title>
     </Head>
-    <Banner />
-
+    <Banner route="<Project/>" />
     <div className="flex justify-center px-6 sm:px-40 md:px-40 py-4 sm:py-10 bg-white mt-20">
       <div className="max-w-2xl">
+        <Navigator />
         <div className="flex w-full gap-x-4">
           <div>
             <Icon src="/assets/folder.svg" />
@@ -58,12 +62,16 @@ const ProjectDescription = (props) => {
         </div>
         <Divider />
         <div className="w-full mt-4">
-          <ReactMarkdown>
-            {mdText}
-          </ReactMarkdown>
+          <div className={styles["markdown"]}>
+            <ReactMarkdown>
+              {mdText}
+            </ReactMarkdown>
+          </div>
         </div>
       </div>
     </div>
+    <Footer />
+
   </div>
 }
 

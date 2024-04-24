@@ -1,5 +1,3 @@
-
-
 .mainBodyContainer {
   width: 100%;
   height: 80vh;
@@ -8,15 +6,16 @@
   padding-left: 15vw;
   padding-right: 15vw;
   padding-bottom: 50px;
+
   .body {
     width: 100%;
+
     .projectList {
       width: 100%;
       display: flex;
       flex-direction: right;
       flex-wrap: wrap;
+      column-gap: 0.3em;
     }
   }
 }
-
-
