@@ -9,6 +9,7 @@ import Navigator from "../../../components/navigator";
 import Footer from "../../../components/footer";
 import { GenericLoader } from "../../../components/genericLoader";
 
+const INITIAL_PAGE_LOAD_DELAY = 800;
 const ReactMarkdown = dynamic(() => import("react-markdown"), { ssr: false });
 const s3HostUrl =
   "https://clarence-webprofile-articles.s3.ap-southeast-1.amazonaws.com/projects";
@@ -17,9 +18,11 @@ const ProjectDescription = (props) => {
   const { id } = props;
   const [project, setProject] = useState({});
   const [mdText, setMdText] = useState();
+  const [toRenderPage, setToRenderPage] = useState(false);
 
   useEffect(() => {
     getArticle();
+    setTimeout(() => setToRenderPage(true), INITIAL_PAGE_LOAD_DELAY);
   }, []);
 
   const getArticle = async () => {
@@ -35,7 +38,7 @@ const ProjectDescription = (props) => {
     );
   };
 
-  if (!mdText || !project || true) {
+  if (!mdText || !project || !toRenderPage) {
     return (
       <div className="flex w-screen h-screen text-white justify-center align-middle items-center bg-black">
         <div className="w-max h-max -mt-20">
