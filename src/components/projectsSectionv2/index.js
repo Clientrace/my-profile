@@ -50,16 +50,6 @@ const ProjectSection = ({ hoverAction, animationFlag }) => {
           Serverless AWS Framework for creating API. Has it's own CLI for code
           scaffolding.
         </ProjectCard>
-        <ProjectCard
-          name="Inxscape"
-          imageUrl="/assets/inxscape.png"
-          platform="Web Application"
-          year="2020"
-          tech={["python"]}
-        >
-          Headless Web Content Management Tool that utilizes Markdown to
-          generate content.
-        </ProjectCard>
       </div>
     </SectionWrapper>
   );
