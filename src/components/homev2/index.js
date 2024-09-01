@@ -70,7 +70,10 @@ const Home = ({
             <div className="text-sm sm:text-lg">{subheadingText}</div>
           </motion.h4>
         </div>
-        <div className="flex gap-x-2 align-center text-center justify-center">
+        <div
+          className="flex gap-x-2 align-center text-center justify-center"
+          style={{ zIndex: "1000" }}
+        >
           <Icon
             onHoverStart={() => setCmdText("> Jump to my facebook profile")}
             src="/assets/facebook.svg"
