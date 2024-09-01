@@ -4,7 +4,6 @@ import Head from "next/head";
 import { useInterval } from "../helper/delta-timer";
 import { useEffect, useState } from "react";
 
-
 import Quote from "../components/quotev2";
 import Contact from "../components/contactv2";
 import Skills from "../components/skillsv2";
@@ -50,7 +49,6 @@ const AppIndex = () => {
 
       if (dtElapsed) {
         // Reload too fast, don't load the animations
-        console.log(dtElapsed);
         if (dtElapsed < RELOAD_SPEED_REF_SEC) {
           setComponentFlags([true, true, true, true]);
           setCmdText("> Hello");

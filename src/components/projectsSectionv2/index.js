@@ -42,23 +42,23 @@ const ProjectSection = ({ hoverAction, animationFlag }) => {
         </ProjectCard>
         <ProjectCard
           name="Pymicro"
-          imageUrl="/assets/pymicro.png"
+          imageUrl="/assets/py-micro.svg"
           platform="AWS Lambda"
           year="2022"
           tech={["python"]}
         >
-          Serverless AWS Framework for creating API. Has it's own CLI for code
-          scaffolding.
+          Serverless AWS Framework for creating Restful API in python. Has it's
+          own CLI for code scaffolding.
         </ProjectCard>
         <ProjectCard
-          name="Inxscape"
-          imageUrl="/assets/inxscape.png"
-          platform="Web Application"
-          year="2020"
-          tech={["python"]}
+          name="Go-micro"
+          imageUrl="/assets/go-micro.svg"
+          platform="AWS Lambda"
+          year="2022"
+          tech={["golang"]}
         >
-          Headless Web Content Management Tool that utilizes Markdown to
-          generate content.
+          Serverless AWS Framework for creating Restful API in golang. Has it's
+          own CLI for code scaffolding.
         </ProjectCard>
       </div>
     </SectionWrapper>

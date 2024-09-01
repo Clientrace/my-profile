@@ -7,7 +7,6 @@ import Name from "../animations/name/name";
 import styles from "./styles.module.scss";
 import Banner from "../banner";
 
-
 const TOP_BANNER_OFFSET = -150;
 
 const Home = ({
@@ -17,7 +16,6 @@ const Home = ({
   setCmdSticky,
   animationFlag,
 }) => {
-
   const pageRef = useRef(null);
   const [isSticky, setSticky] = useState(false);
 
@@ -25,7 +23,7 @@ const Home = ({
     let scrollPos = getScrollPosition(pageRef.current).y;
     setSticky(scrollPos < TOP_BANNER_OFFSET);
     setCmdSticky(scrollPos < TOP_BANNER_OFFSET);
-  }
+  };
 
   const titleAnimation = animationFlag && {
     initial: { opacity: 0 },
@@ -35,15 +33,27 @@ const Home = ({
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-    window.removeEventListener("scroll", () => handleScroll())
-  }, [])
+    window.removeEventListener("scroll", () => handleScroll());
+  }, []);
 
   return (
     <>
       <div
         ref={pageRef}
-        className={`${styles["Main"]} flex w-full text-white justify-center align-center text-center flex-col`}
+        className={`${styles["Main"]} relative flex w-full text-white justify-center align-center text-center flex-col`}
       >
+        <div className="absolute w-full h-full flex align-middle items-center justify-center overflow-hidden">
+          <div
+            className="w-full h-full"
+            style={{
+              backgroundImage: 'url("/assets/profile-image-banner.jpeg")',
+              backgroundSize: "cover",
+              backgroundPositionY: "35%",
+              backgroundPositionX: "center",
+              opacity: 0.15,
+            }}
+          />
+        </div>
         <div className="tracking-wider">
           <motion.h1
             initial={{ opacity: 0 }}
@@ -60,7 +70,10 @@ const Home = ({
             <div className="text-sm sm:text-lg">{subheadingText}</div>
           </motion.h4>
         </div>
-        <div className="flex gap-x-2 align-center text-center justify-center">
+        <div
+          className="flex gap-x-2 align-center text-center justify-center"
+          style={{ zIndex: "1000" }}
+        >
           <Icon
             onHoverStart={() => setCmdText("> Jump to my facebook profile")}
             src="/assets/facebook.svg"
