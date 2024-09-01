@@ -1,8 +1,10 @@
 @import "../../styles/colors";
 
+
 .Main {
   background-color: $dark;
   height: 30vh;
+  overflow-y: hidden;
 }
 
 @media only screen and (max-width: 600px) {

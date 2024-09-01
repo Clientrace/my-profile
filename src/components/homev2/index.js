@@ -40,8 +40,20 @@ const Home = ({
     <>
       <div
         ref={pageRef}
-        className={`${styles["Main"]} flex w-full text-white justify-center align-center text-center flex-col`}
+        className={`${styles["Main"]} relative flex w-full text-white justify-center align-center text-center flex-col`}
       >
+        <div className="absolute w-full h-full flex align-middle items-center justify-center overflow-hidden">
+          <div
+            className="w-full h-full"
+            style={{
+              backgroundImage: 'url("/assets/profile-image-banner.jpeg")',
+              backgroundSize: "cover",
+              backgroundPositionY: "35%",
+              backgroundPositionX: "center",
+              opacity: 0.15,
+            }}
+          />
+        </div>
         <div className="tracking-wider">
           <motion.h1
             initial={{ opacity: 0 }}
