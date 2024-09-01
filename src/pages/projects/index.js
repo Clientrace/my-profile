@@ -12,6 +12,7 @@ import Subheading from "../../components/subheading/subheading";
 import Navigator from "../../components/navigator";
 
 import Divider from "../../components/divider/divider";
+import { PageLoadWrapper } from "../../components/pageLoadWrapper";
 import { ProjectCard } from "../../components/projectsSectionv2/components/projectCard";
 
 const Projects = () => {

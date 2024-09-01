@@ -7,7 +7,6 @@ import Name from "../animations/name/name";
 import styles from "./styles.module.scss";
 import Banner from "../banner";
 
-
 const TOP_BANNER_OFFSET = -150;
 
 const Home = ({
@@ -17,7 +16,6 @@ const Home = ({
   setCmdSticky,
   animationFlag,
 }) => {
-
   const pageRef = useRef(null);
   const [isSticky, setSticky] = useState(false);
 
@@ -25,7 +23,7 @@ const Home = ({
     let scrollPos = getScrollPosition(pageRef.current).y;
     setSticky(scrollPos < TOP_BANNER_OFFSET);
     setCmdSticky(scrollPos < TOP_BANNER_OFFSET);
-  }
+  };
 
   const titleAnimation = animationFlag && {
     initial: { opacity: 0 },
@@ -35,8 +33,8 @@ const Home = ({
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-    window.removeEventListener("scroll", () => handleScroll())
-  }, [])
+    window.removeEventListener("scroll", () => handleScroll());
+  }, []);
 
   return (
     <>

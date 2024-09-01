@@ -8,6 +8,7 @@ import styles from "./markdown.module.scss";
 import Navigator from "../../../components/navigator";
 import Footer from "../../../components/footer";
 import { GenericLoader } from "../../../components/genericLoader";
+import { PageLoadWrapper } from "../../../components/pageLoadWrapper";
 
 const INITIAL_PAGE_LOAD_DELAY = 800;
 const ReactMarkdown = dynamic(() => import("react-markdown"), { ssr: false });
@@ -52,12 +53,11 @@ const ProjectDescription = (props) => {
   }
 
   return (
-    <div className="w-full">
+    <PageLoadWrapper title="<Project />">
       <Head>
         <title>Project</title>
       </Head>
-      <Banner route="<Project/>" />
-      <div className="flex justify-center px-6 sm:px-40 md:px-40 py-4 sm:py-10 bg-white mt-20">
+      <div className="flex justify-center px-6 sm:px-40 md:px-40 py-4 sm:py-10 bg-white">
         <div className="max-w-2xl">
           <Navigator />
           <div className="flex w-full gap-x-4">
@@ -78,7 +78,7 @@ const ProjectDescription = (props) => {
         </div>
       </div>
       <Footer />
-    </div>
+    </PageLoadWrapper>
   );
 };
 
