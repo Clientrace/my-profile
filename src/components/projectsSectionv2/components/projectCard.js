@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 
-
 export const ProjectCard = ({
   name,
   imageUrl,
@@ -32,7 +31,7 @@ export const ProjectCard = ({
     <motion.div
       onClick={() => {
         if (linkoutUrl) {
-          router.push(linkoutUrl)
+          router.push(linkoutUrl);
         }
       }}
       className="p-6 w-72 shadow-lg cursor-pointer"
@@ -40,8 +39,8 @@ export const ProjectCard = ({
     >
       <div className="flex space-x-2">
         <div className="w-full">
-          <div className="w-12 h-fit rounded-full border border-solid border-color-white space-x-2">
-            <img src={imageUrl} className="rounded-full w-12 h-12" />
+          <div className="w-12 h-fit space-x-2">
+            <img src={imageUrl} className="w-12 h-12" />
           </div>
         </div>
         <div className="text-sm text-gray-200">{year}</div>
