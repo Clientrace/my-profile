@@ -6,6 +6,7 @@ import Subheading from "../subheading/subheading";
 import Divider from "../divider/divider";
 
 import { useEffect, useState } from "react";
+import { TechDump } from "../techdump";
 
 const GauageBar = ({ title, meter }) => {
   return (
@@ -18,18 +19,17 @@ const GauageBar = ({ title, meter }) => {
   );
 };
 
-
 const computeExperience = (yearStarted) => {
   let currentDate = new Date();
   let currentYear = currentDate.getFullYear();
   return currentYear - yearStarted;
-}
+};
 
 const Skills = ({ hoverAction, animationFlag }) => {
   const [loaded, setLoaded] = useState(false);
-  useEffect(()=>{
+  useEffect(() => {
     computeExperience();
-  },[])
+  }, []);
 
   return (
     <SectionWrapper hoverAction={hoverAction}>
@@ -55,6 +55,9 @@ const Skills = ({ hoverAction, animationFlag }) => {
             </div>
           </div>
           <Divider />
+          <div>
+            <TechDump />
+          </div>
         </div>
         <div className="w-full px-0 sm:px-2 sm:mt-2">
           <div className="py-4 px-10" style={{ backgroundColor: "#222" }}>
@@ -65,12 +68,27 @@ const Skills = ({ hoverAction, animationFlag }) => {
               </div>
             </div>
             <div className="w-full text-white my-4">
-              <GauageBar title={`Python (${computeExperience(2017)}yrs Exp)`} meter="85%" />
-              <GauageBar title={`Javascript (${computeExperience(2018)}yrs Exp)`} meter="75%" />
-              <GauageBar title={`NodeJS (${computeExperience(2018)-1}yrs Exp)`} meter="75%" />
+              <GauageBar
+                title={`Python (${computeExperience(2017)}yrs Exp)`}
+                meter="85%"
+              />
+              <GauageBar
+                title={`Javascript (${computeExperience(2018)}yrs Exp)`}
+                meter="75%"
+              />
+              <GauageBar
+                title={`NodeJS (${computeExperience(2018) - 1}yrs Exp)`}
+                meter="75%"
+              />
               <GauageBar title="Go lang (2yrs Exp)" meter="60%" />
-              <GauageBar title={`HTML (${computeExperience(2018)}yrs Exp)`} meter="70%" />
-              <GauageBar title={`CSS (${computeExperience(2018)}yrs Exp)`} meter="60%" />
+              <GauageBar
+                title={`HTML (${computeExperience(2018)}yrs Exp)`}
+                meter="70%"
+              />
+              <GauageBar
+                title={`CSS (${computeExperience(2018)}yrs Exp)`}
+                meter="60%"
+              />
               <GauageBar title="Java (2yrs Exp)" meter="40%" />
               <GauageBar title="C (1yr Exp)" meter="30%" />
               <GauageBar title="C++ (1yr Exp)" meter="20%" />

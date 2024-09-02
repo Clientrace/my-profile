@@ -1,9 +1,5 @@
 const techs = [
   {
-    src: "https://user-images.githubusercontent.com/25181517/192108372-f71d70ac-7ae6-4c0d-8395-51d8870c2ef0.png",
-    title: "git",
-  },
-  {
     src: "https://user-images.githubusercontent.com/25181517/183423507-c056a6f9-1ba8-4312-a350-19bcbc5a8697.png",
     title: "python",
   },
@@ -148,14 +144,25 @@ const techs = [
     src: "https://github.com/user-attachments/assets/63d6cb39-63c6-44fc-bbb1-2adcb8458a32",
     title: "raspberrypi ",
   },
+  {
+    src: "https://user-images.githubusercontent.com/25181517/192108372-f71d70ac-7ae6-4c0d-8395-51d8870c2ef0.png",
+    title: "git",
+  },
 ];
 
 export const TechDump = () => {
   return (
-    <div className="flex w-full h-fit space-x-2">
-      {techs.map((tech) => {
-        return <img src={tech.src} />;
-      })}
+    <div className="w-full h-full my-4">
+      <div className="my-4">Tech Dump: </div>
+      <div className="flex flex-wrap w-full h-full gap-2 overflow-wrap">
+        {techs.map((tech) => {
+          return (
+            <div className="flex w-16 h-16 items-end align-bottom justify-center">
+              <img className="w-12 h-12" src={tech.src} />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
