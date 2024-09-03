@@ -10,8 +10,8 @@ const Quote = () => {
         </div>
         <div className="text-base text-center text-gray-500">- Arthur C.</div>
       </div>
-      <div className="absolute bottom-0 right-0" style={{ opacity: 0.1 }}>
-        <img src="/assets/mascot.png" />
+      <div className="absolute bottom-0 right-0" style={{ opacity: 0.2 }}>
+        <img src="/assets/mascot.png" className="h-80" />
       </div>
     </div>
   );
