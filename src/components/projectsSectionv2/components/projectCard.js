@@ -34,7 +34,7 @@ export const ProjectCard = ({
           router.push(linkoutUrl);
         }
       }}
-      className="p-6 w-72 shadow-lg cursor-pointer"
+      className="p-6 w-72 h-72 shadow-lg cursor-pointer"
       style={{ backgroundColor: "#222222" }}
     >
       <div className="flex space-x-2">
