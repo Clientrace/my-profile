@@ -52,6 +52,7 @@ const ProjectSection = ({ hoverAction, animationFlag }) => {
           own CLI for code scaffolding.
         </ProjectCard>
         <ProjectCard
+          linkoutUrl="https://github.com/Clientrace/go-micro"
           name="Go-micro"
           imageUrl="/assets/go-micro.svg"
           platform="AWS Lambda"
