@@ -41,6 +41,7 @@ const ProjectSection = ({ hoverAction, animationFlag }) => {
           relies on messenger API.
         </ProjectCard>
         <ProjectCard
+          linkoutUrl="/projects/pymicro"
           name="Pymicro"
           imageUrl="/assets/py-micro.svg"
           platform="AWS Lambda"
