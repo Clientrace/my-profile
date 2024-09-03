@@ -57,7 +57,7 @@ const ProjectDescription = (props) => {
       <Head>
         <title>Project</title>
       </Head>
-      <div className="flex justify-center px-6 sm:px-40 md:px-40 py-4 sm:py-10 bg-white">
+      <div className="flex justify-start px-6 sm:px-40 md:px-40 py-4 sm:py-10 bg-white">
         <div className="max-w-2xl">
           <Navigator />
           <div className="flex w-full gap-x-4">
