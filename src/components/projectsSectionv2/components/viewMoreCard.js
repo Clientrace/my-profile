@@ -1,6 +1,10 @@
+import { useRouter } from "next/router";
+
 export const ViewMoreCard = ({}) => {
+  const router = useRouter();
   return (
     <div
+      onClick={() => router.push("/projects")}
       className="relative p-6 w-72 h-72 cursor-pointer"
       style={{ backgroundColor: "#121212" }}
     >
