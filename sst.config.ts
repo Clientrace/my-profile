@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/triple-slash-reference
 /// <reference path="./.sst/platform/config.d.ts" />
 
 export default $config({
@@ -11,6 +10,15 @@ export default $config({
     };
   },
   async run() {
-    new sst.aws.Nextjs("MyWeb");
+    new sst.aws.Nextjs('MyWeb', {
+      bucket: {
+        bucketName: "clarence-webprofile-prod", 
+      },
+      cdk: {
+        distribution: {
+          distributionId: "E1X57TBRF98HT", 
+        },
+      },
+    });
   },
 });
