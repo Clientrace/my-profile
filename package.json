@@ -7,7 +7,7 @@
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start",
-    "deploy": "sst deploy"
+    "deploy": "sst deploy --stage prod"
   },
   "dependencies": {
     "@serverless/components": "^3.18.2",
