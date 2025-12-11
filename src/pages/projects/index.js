@@ -12,7 +12,7 @@ import Subheading from "../../components/subheading/subheading";
 import Navigator from "../../components/navigator";
 
 import Divider from "../../components/divider/divider";
-import { PageLoadWrapper } from "../../components/pageLoadWrapper";
+import Footer from "../../components/footer";
 import { ProjectCard } from "../../components/projectsSectionv2/components/projectCard";
 
 const Projects = () => {
@@ -65,19 +65,32 @@ const Projects = () => {
                 Heavily relies on messenger API.
               </ProjectCard>
               <ProjectCard
+                linkoutUrl="/projects/pymicro"
                 name="Pymicro"
-                imageUrl="/assets/pymicro.png"
+                imageUrl="/assets/py-micro.svg"
                 platform="AWS Lambda"
                 year="2022"
                 tech={["python"]}
               >
-                Serverless AWS Framework for creating API. Has it's own CLI for
-                code scaffolding.
+                Serverless AWS Framework for creating Restful API in python. Has
+                it's own CLI for code scaffolding.
+              </ProjectCard>
+              <ProjectCard
+                linkoutUrl="https://github.com/Clientrace/go-micro"
+                name="Go-micro"
+                imageUrl="/assets/go-micro.svg"
+                platform="AWS Lambda"
+                year="2022"
+                tech={["golang"]}
+              >
+                Serverless AWS Framework for creating Restful API in golang. Has
+                it's own CLI for code scaffolding.
               </ProjectCard>
             </div>
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

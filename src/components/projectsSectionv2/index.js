@@ -6,6 +6,7 @@ import Divider from "../divider/divider";
 import SectionWrapper from "../sectionWrapper";
 
 import { ProjectCard } from "./components/projectCard";
+import { ViewMoreCard } from "./components/viewMoreCard";
 
 const ProjectSection = ({ hoverAction, animationFlag }) => {
   const [loaded, setLoaded] = useState(false);
@@ -28,7 +29,7 @@ const ProjectSection = ({ hoverAction, animationFlag }) => {
         )}
       </Heading>
       <Divider />
-      <div className="flex flex-wrap w-full gap-2 scroll-smooth overflow-auto items-center justify-center">
+      <div className="flex flex-wrap w-full gap-2 scroll-smooth overflow-auto items-center justify-start">
         <ProjectCard
           linkoutUrl="/projects/friday-bot"
           name="Friday Chatbot"
@@ -37,10 +38,11 @@ const ProjectSection = ({ hoverAction, animationFlag }) => {
           year="2018"
           tech={["python"]}
         >
-          A facebook messenger chatbot for answer simple search queries. Heavily
-          relies on messenger API.
+          A facebook messenger chatbot for answer search queries. Heavily relies
+          on messenger API.
         </ProjectCard>
         <ProjectCard
+          linkoutUrl="/projects/pymicro"
           name="Pymicro"
           imageUrl="/assets/py-micro.svg"
           platform="AWS Lambda"
@@ -51,6 +53,7 @@ const ProjectSection = ({ hoverAction, animationFlag }) => {
           own CLI for code scaffolding.
         </ProjectCard>
         <ProjectCard
+          linkoutUrl="https://github.com/Clientrace/go-micro"
           name="Go-micro"
           imageUrl="/assets/go-micro.svg"
           platform="AWS Lambda"
@@ -60,6 +63,7 @@ const ProjectSection = ({ hoverAction, animationFlag }) => {
           Serverless AWS Framework for creating Restful API in golang. Has it's
           own CLI for code scaffolding.
         </ProjectCard>
+        <ViewMoreCard />
       </div>
     </SectionWrapper>
   );

@@ -100,7 +100,7 @@ const Home = ({
           />
         </div>
       </div>
-      {isSticky && <Banner route="<Home/>" />}
+      {isSticky && <Banner route={subheadingText} />}
     </>
   );
 };

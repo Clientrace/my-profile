@@ -86,7 +86,7 @@ const AppIndex = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full h-full">
       <Head>
         <title>Clarence Penaflor</title>
       </Head>
